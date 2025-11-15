@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Marisa TV</title>
+    <link rel="stylesheet" href="src/css/output.css" />
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+
+
+</head>
+
+<body>
+    <!-- En tete de ma page -->
+
+    <header>
+        <nav class="bg-[#094154] font-['Stolz',_sans-serif]">
+            <div class="flex items-center justify-between h-22 px-8">
+
+                <a href="index.html">
+                    <div class="mr-12">
+                        <img src="src/assets/images/logo.png" alt="Logo de la radio"
+                            class="w-20 h-20 md:w-24 md:h-24" />
+                    </div>
+                </a>
+
+                <div class="flex flex-wrap gap-x-8 text-white text-base" id="main-nav-links">
+
+                    <a href="index.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                        Accueil
+                    </a>
+
+                    <a href="a-propos.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                        À propos
+                    </a>
+
+                    <a href="nos-emissions.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                        Nos émissions
+                    </a>
+
+                    <a href="grille.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                        Grille
+                    </a>
+
+                    <a href="actualites.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                        Actualités
+                    </a>
+
+                    <a href="radio-marisa.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                        Radio Marisa
+                    </a>
+                    <a href="partenariats.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                        Partenariats
+                    </a>
+                    <a href="contacts.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                        Contacts
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!-- Hero Section -->
+    <section class="relative bg-[url('../assets/images/Marisa_10.jpg')]
+    bg-cover bg-center py-06 md:py-12 lg:py-24 text-white font-['Stolz',_sans-serif]">
+
+        <div class="absolute inset-0 bg-[#094154] opacity-90"></div>
+
+        <div class="relative z-10 container mx-auto px-4 text-center">
+            <h1 class="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6"
+                data-aos="fade-up" data-aos-duration="9000" data-aos-delay="200">
+                Éclairons l'Afrique par la Foi, la
+                <br class="hidden sm:inline" />
+                Culture et l'Éducation
+            </h1>
+
+            <p class="text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-10 opacity-90" data-aos="fade-up"
+                data-aos-duration="9000" data-aos-delay="400">
+                Marisa TV Afrique vous accompagne chaque jour avec des programmes spirituels, culturels et sociaux
+                qui transforment des vies.
+            </p>
+
+            <div
+                class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-16">
+                <a href="#" data-aos="fade-right" data-aos-duration="9000" data-aos-delay="200"
+                    class="bg-[#FFDE11] text-[#094154] font-bold py-3 px-8 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
+                    Découvrir nos émissions
+                </a>
+                <a href="#" data-aos="fade-left" data-aos-duration="9000" data-aos-delay="400"
+                    class="bg-white text-[#094154] font-bold py-3 px-8 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
+                    Grille des programmes
+                </a>
+            </div>
+
+            <!-- Card TV -->
+            <div class="max-w-4xl mx-auto border-7 border-white p-6 md:p-8 lg:p-10 bg-[#094154] rounded-lg shadow-xl">
+                <div class="flex flex-col items-center justify-center space-y-6">
+
+                    <div
+                        class="w-20 h-20 md:w-24 md:h-24 bg-[#FFDE11] rounded-full flex items-center justify-center cursor-pointer animate-pulse-yellow">
+                        <svg class="w-10 h-10 md:w-12 md:h-12 text-[#094154]" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">
+                        Regardez Marisa TV en direct
+                    </h2>
+
+                    <p class="text-base md:text-lg text-white opacity-80">
+                        Diffusion 24/7 de vos programmes préférés
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Thématiques Section -->
+    <section class="py-12 md:py-20 bg-white font-['Stolz',_sans-serif] overflow-x-hidden">
+        <div class="w-full mx-auto px-6 md:px-12 lg:px-20">
+
+            <div class="flex justify-end mb-8">
+                <a href="#"
+                    class="flex items-center space-x-2 bg-[#FFDE11] text-[#094154] font-bold py-2 px-4 rounded-lg text-sm shadow-md">
+                    <i class="ph ph-broadcast ph-bold text-2xl icon-glow bg-red-500/20 rounded-full p-1"></i>
+                    <span>Live TV</span>
+                </a>
+            </div>
+
+            <div class="max-w-4xl mb-12">
+                <h2 class="text-3xl font-bold text-[#094154] mb-2" data-aos="fade-right" data-aos-duration="1000">
+                    Nos thématiques
+                </h2>
+                <div class="w-20 h-1 bg-[#FFDE11] mb-4" data-aos="fade-right" data-aos-duration="1000"></div>
+                <p class="text-lg text-[#404040]" data-aos="fade-right" data-aos-duration="1000">
+                    Les fondations de nos programmes
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- card 1 -->
+                <div class="relative bg-white border border-gray-200 rounded-xl shadow-lg pt-16 pb-6 px-6 
+                        flex flex-col items-start transition-shadow hover:shadow-xl overflow-hidden" data-aos="fade-up"
+                    data-aos-duration="1000" data-aos-delay="200">
+                    <!-- Conteneur absolu corrigé avec overflow-hidden -->
+                    <div class="absolute -top-6 -left-6 w-24 h-24 bg-[#FFDE11] 
+                            rounded-tl-3xl rounded-tr-xl rounded-bl-xl rounded-br-3xl
+                            flex items-center justify-center shadow-md overflow-hidden">
+                        <i class="ph ph-heart ph-bold text-4xl mt-5 ml-5 text-[#094154]"></i>
+                    </div>
+
+                    <div class="mt-10">
+                        <h3 class="text-2xl font-bold text-[#094154] mb-3">
+                            Foi & Spiritualité
+                        </h3>
+                        <p class="text-gray-600 text-base leading-relaxed">
+                            Programmes bibliques quotidiens pour fortifier votre relation avec Dieu.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- card 2 -->
+                <div class="relative bg-white border border-gray-200 rounded-xl shadow-lg pt-16 pb-6 px-6 
+                        flex flex-col items-start transition-shadow hover:shadow-xl overflow-hidden" data-aos="fade-up"
+                    data-aos-duration="1000" data-aos-delay="400">
+                    <div class="absolute -top-6 -left-6 w-24 h-24 bg-[#FFDE11] 
+                            rounded-tr-xl rounded-bl-xl rounded-tl-3xl rounded-br-3xl 
+                            flex items-center justify-center shadow-md overflow-hidden">
+                        <i class="ph ph-diamonds-four ph-bold mt-5 ml-5 text-4xl text-[#094154]"></i>
+                    </div>
+
+                    <div class="mt-8">
+                        <h3 class="text-2xl font-bold text-[#094154] mb-3">
+                            Culture Africaine
+                        </h3>
+                        <p class="text-gray-600 text-base leading-relaxed">
+                            Célébration des richesses culturelles et traditions de notre continent.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- card 3 -->
+                <div class="relative bg-white border border-gray-200 rounded-xl shadow-lg pt-16 pb-6 px-6 
+                        flex flex-col items-start transition-shadow hover:shadow-xl overflow-hidden" data-aos="fade-up"
+                    data-aos-duration="1000" data-aos-delay="800">
+                    <div class="absolute -top-6 -left-6 w-24 h-24 bg-[#FFDE11] 
+                            rounded-tr-xl rounded-bl-xl rounded-tl-3xl rounded-br-3xl 
+                            flex items-center justify-center shadow-md overflow-hidden">
+                        <i class="ph ph-users ph-bold mt-5 ml-5 text-4xl text-[#094154]"></i>
+                    </div>
+
+                    <div class="mt-8">
+                        <h3 class="text-2xl font-bold text-[#094154] mb-3">
+                            Impact Social
+                        </h3>
+                        <p class="text-gray-600 text-base leading-relaxed">
+                            Actions concrètes pour l'éducation, la santé et le développement communautaire.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+    <!--Footer-->
+
+
+    <!-- Bouton de retour en haut -->
+
+
+
+    <!-- JavaScript -->
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="src/scripts/script-index.js"></script>
+    <script src="src/scripts/script-nav.js"></script>
+    <script src="src/scripts/script-modal.js"></script>
+
+
+</body>
+
+</html>

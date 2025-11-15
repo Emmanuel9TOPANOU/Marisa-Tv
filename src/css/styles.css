@@ -1,0 +1,80 @@
+/* ==========================
+   Global : gestion du défilement
+   ========================== */
+html, body {
+    overflow-x: hidden;  /* Empêche le défilement horizontal global */
+    width: 100%;
+}
+
+
+/* Gestion du scroll pour les ancres */
+main {
+   min-height: 100vh;
+   overflow-y: visible;
+}
+
+
+/* ==========================
+   Police Stolz
+   ========================== */
+@font-face {
+    font-family: 'Stolz';
+    src: url('/fonts/Stolz-Regular.woff2') format('woff2'); /* Ajustez le chemin */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Bonne pratique pour le chargement */
+}
+
+/* Classe pour utiliser Stolz */
+.text-stolz {
+    font-family: 'Stolz', sans-serif;
+}
+
+/* ==========================
+   Couleurs
+   ========================== */
+.bg-dark-blue {
+    background-color: #094154;
+}
+
+.bg-yellow {
+    background-color: #FFDE11;
+}
+
+.text-dark-blue {
+    color: #094154;
+}
+
+/* ==========================
+   Animations
+   ========================== */
+
+/* Pulse bleu */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0px 0 rgb(5, 46, 81);
+  }
+  50% {
+    box-shadow: 0 0 12px 4px rgba(5, 46, 81);
+  }
+}
+
+.icon-glow {
+  animation: pulseGlow 1s infinite ease-in-out;
+}
+
+/* Pulse jaune */
+@keyframes pulseYellow {
+  0%, 100% {
+    box-shadow: 0 0 0px 0 rgba(255, 222, 17, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 18px 8px rgba(255, 222, 17, 0.9);
+  }
+}
+
+.animate-pulse-yellow {
+  animation: pulseYellow 1.4s infinite ease-in-out;
+}
+
+
