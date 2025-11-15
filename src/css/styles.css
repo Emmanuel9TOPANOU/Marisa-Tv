@@ -7,11 +7,22 @@ html, body {
 }
 
 
+body.aos-animate {
+    overflow-x: hidden !important;
+}
+
+
 /* Gestion du scroll pour les ancres */
 main {
    min-height: 100vh;
    overflow-y: visible;
 }
+
+section {
+  overflow-x: hidden;
+}
+
+
 
 
 /* ==========================
