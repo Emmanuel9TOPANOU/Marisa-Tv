@@ -16,68 +16,429 @@
 
 <body>
     <!-- En tete de ma page -->
-    <header>
+    <header class="fixed top-0 w-full z-50">
         <nav class="bg-[#094154] font-['Stolz',_sans-serif]">
-            <div class="flex items-center justify-between h-16 px-8">
+            <div class="flex items-center justify-between h-22 px-4 md:px-8">
 
                 <a href="index.html">
-                    <div class="mr-12">
-                        <img src="src/assets/images/logo.png" alt="Logo de la radio" class="w-24 h-24 object-contain" />
+                    <div class="mr-4 md:mr-12">
+                        <img src="src/assets/images/logo.png" alt="Logo de la radio"
+                            class="w-16 h-16 md:w-24 md:h-24" />
                     </div>
                 </a>
 
-                <div class="flex space-x-8 text-white text-base" id="main-nav-links">
-
-                    <a href="index.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                <!-- Liens de navigation pour desktop -->
+                <div class="hidden md:flex flex-wrap gap-x-4 lg:gap-x-8 text-white text-base" id="main-nav-links">
+                    <a href="index.html" class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Accueil
                     </a>
-
-                    <a href="a-propos.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="a-propos.html"
+                        class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         À propos
                     </a>
-                    <a href="nos-emissions.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="nos-emissions.html"
+                        class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Nos émissions
                     </a>
-                    <a href="grille.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="grille.html" class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Grille
                     </a>
-                    <a href="actualites.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="actualites.html"
+                        class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Actualités
                     </a>
-                    <a href="radio-marisa.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="radio-marisa.html"
+                        class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Radio Marisa
                     </a>
-                    <a href="partenariats.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="partenariats.html"
+                        class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Partenariats
                     </a>
-                    <a href="contacts.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="contacts.html"
+                        class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Contacts
                     </a>
                 </div>
+
+                <!-- Bouton hamburger -->
+                <button id="hamburgerBtn" class="md:hidden text-white text-3xl">
+                    <i class="ph ph-list"></i>
+                </button>
             </div>
         </nav>
+
+        <!-- Sidebar mobile -->
+        <div id="mobileSidebar"
+            class="fixed top-0 right-[-100%] w-64 h-full bg-[#094154] text-white p-6 flex flex-col gap-6 transition-all duration-300 z-50">
+            <button id="closeSidebar" class="self-end text-2xl">&times;</button>
+            <a href="index.html" class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Accueil</a>
+            <a href="a-propos.html" class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">À propos</a>
+            <a href="nos-emissions.html" class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Nos
+                émissions</a>
+            <a href="grille.html" class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Grille</a>
+            <a href="actualites.html"
+                class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Actualités</a>
+            <a href="radio-marisa.html" class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Radio
+                Marisa</a>
+            <a href="partenariats.html"
+                class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Partenariats</a>
+            <a href="contacts.html" class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Contacts</a>
+        </div>
     </header>
 
 
-    <main >
+    <main>
+        <!-- Section hero -->
+        <section
+            class="relative bg-cover bg-center py-10 md:py-16 text-white font-['Stolz',_sans-serif] overflow-hidden flex items-center justify-center">
 
-    
-        
+            <div class="absolute inset-0"
+                style="background-image: url('src/assets/images/Marisa_8.jpg'); background-size: cover; background-position: center;">
+                <div class="absolute inset-0 bg-[#094154] opacity-90"></div>
+            </div>
+
+            <div class="relative z-10 container mx-auto px-4 text-center max-w-3xl">
+
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-4">
+                    A propos de nous
+                </h1>
+
+                <p class="text-base md:text-lg opacity-90">
+                    Première chaîne religieuse à impact social en Afrique de l'Ouest, nous œuvrons depuis 2018
+                    pour diffuser la Parole de Dieu et promouvoir les valeurs culturelles africaines.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- Section contenu -->
+        <section class="bg-white py-16">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start px-6">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-700 mb-6">
+                        Notre histoire
+                        <span class="block w-24 h-1 bg-[#FFDE11] mt-2"></span>
+                    </h2>
+
+                    <p class="text-gray-600 font-bold leading-relaxed mb-4">
+                        Fondée en 2018 à Cotonou, au Bénin, Marisa TV Afrique est née d’une vision claire :
+                        créer une plateforme médiatique chrétienne et africaine qui allie spiritualité,
+                        culture et engagement social.
+                    </p>
+
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Dès ses débuts, la chaîne s’est donnée pour mission de raconter l’Afrique autrement,
+                        à travers la foi, la connaissance et la solidarité. Portée par une équipe passionnée,
+                        Marisa TV Afrique propose une programmation équilibrée
+                        mêlant enseignements bibliques, émissions culturelles, divertissement, et initiatives
+                        communautaires concrètes. Chaque programme est pensé pour inspirer, informer et rassembler.
+                    </p>
+
+                    <p class="text-gray-600 leading-relaxed">
+                        Aujourd’hui, Marisa TV Afrique et sa radio sœur
+                        diffusent des contenus de qualité 24h/24 à travers l’Afrique de l’Ouest et la diaspora.
+                        Notre ambition est d’être un média panafricain de référence, porteur de valeurs,
+                        d’unité et de transformation positive.
+                    </p>
+                </div>
+
+                <div class="relative pt-6">
+                    <img src="src/assets/images/Marisa_7.jpg" alt="Studio d'enregistrement radio"
+                        class="rounded-xl shadow-lg object-cover w-full h-110 lg:max-h-full" />
+
+                    <!-- BADGE EN BAS COMME SUR LE DESIGN -->
+                    <div class="absolute -bottom-5 ml-99
+                      bg-yellow-300 text-[#094154] font-bold
+                        rounded-xl px-10 py-2 shadow-xl text-center">
+                        <p class="text-4xl">7+</p>
+                        <p class="text-xs font-semibold leading-none">
+                            Années<br>d'excellence
+                        </p>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </section>
+
+
+        <!-- Section Nos piliers -->
+        <section class="bg-gray-50 py-16">
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    Nos piliers
+                    <span class="block w-24 h-1 bg-[#FFDE11] mx-auto mt-2"></span>
+                </h2>
+                <p class="text-gray-600 mb-12 max-w-3xl mx-auto">
+                    Les fondations solides qui guident chacune de nos actions et donnent sens à notre mission médiatique
+                </p>
+
+
+                <!-- Cartes 1 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center border-t-5 border-[#FFDE11]">
+                        <div class="text-[#FFDE11] mb-4">
+                            <i class="ph ph-target ph-bold text-5xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#FFDE11] mb-3">Notre Mission</h3>
+                        <p class="text-gray-600 text-center">
+                            Éclairer l'Afrique par des programmes religieux et sociaux de qualité, porteurs
+                            de valeurs spirituelles et d'impact communautaire.
+                        </p>
+                    </div>
+
+
+                    <!-- Carte 2 -->
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center border-t-5 border-gray-700">
+                        <div class="text-gray-700 mb-4">
+                            <i class="ph ph-eye ph-bold text-5xl"></i>
+
+
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Notre Vision</h3>
+                        <p class="text-gray-600 text-center">
+                            Devenir la référence panafricaine en matière de médias religieux et culturels,
+                            transformant des vies par la foi et l'éducation.
+                        </p>
+                    </div>
+
+                    <!-- Carte 3 -->
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center border-t-5 border-yellow-300">
+                        <div class="text-yellow-300 mb-4">
+                            <i class="ph ph-medal ph-bold text-5xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-yellow-300 mb-3">Nos Valeurs</h3>
+                        <p class="text-gray-600 text-center">
+                            Intégrité, excellence, service communautaire, respect des cultures
+                            africaines et engagement envers la jeunesse.
+                        </p>
+                    </div>
+                    <!-- carte 4 -->
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center border-t-5 border-gray-800">
+                        <div class="text-gray-800 mb-4 ">
+                            <i class="ph ph-users ph-bold text-5xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold  text-gray-800 mb-3">Notre Engagement</h3>
+                        <p class="text-gray-600 text-center">
+                            Servir notre communauté avec des contenus
+                            authentiques, inspirants et accessibles à tous les
+                            Africains et la diaspora.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section chiffres clés -->
+        <div class="bg-[#094154] text-white py-16">
+
+            <div class="container mx-auto px-4 text-center">
+
+                <h2 class="text-3xl md:text-4xl font-bold">
+                    Marisa TV en quelques chiffres
+                </h2>
+
+                <div class="w-32 h-1 bg-yellow-400 mx-auto mt-4 mb-12"></div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                    <div>
+                        <span class="text-5xl font-bold text-yellow-400">2M+</span>
+                        <p class="text-base md:text-lg mt-2">Téléspectateurs mensuels</p>
+                    </div>
+
+                    <div>
+                        <span class="text-5xl font-bold text-yellow-400">50+</span>
+                        <p class="text-base md:text-lg mt-2">Émissions produites</p>
+                    </div>
+
+                    <div>
+                        <span class="text-5xl font-bold text-yellow-400">24/7</span>
+                        <p class="text-base md:text-lg mt-2">Diffusion continue</p>
+                    </div>
+
+                    <div>
+                        <span class="text-5xl font-bold text-yellow-400">3</span>
+                        <p class="text-base md:text-lg mt-2">Pays couverts</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Notre équipe -->
+        <div class="bg-white py-20">
+            <div class="container mx-auto px-4 text-center">
+
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+                    Notre équipe
+                </h2>
+
+                <div class="w-16 h-1 bg-yellow-400 mx-auto mt-2"></div>
+
+                <p class="text-gray-600 text-lg mt-4 mb-12">
+                    Des professionnels dévoués au service de la communauté
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Carte 1 -->
+                    <div class="relative overflow-hidden rounded-xl shadow-xl border border-gray-100">
+                        <img src="src/assets/images/Marisa_10.jpg" alt="Photo de Cyrille T. MONKOUN TCHIBOZO"
+                            class="h-120 w-full object-cover">
+                        <div
+                            class="absolute bottom-10 left-0 right-0 mx-auto w-11/12 bg-white p-4 rounded-lg shadow-2xl transform translate-y-1/4">
+                            <p class="font-semibold text-gray-800">Cyrille T. MONKOUN TCHIBOZO</p>
+                            <p class="text-sm text-gray-500">Directeur Général</p>
+                        </div>
+                    </div>
+                    <!-- Carte 2 -->
+                    <div class="relative overflow-hidden rounded-xl shadow-xl border border-gray-100">
+                        <img src="src/assets/images/Marisa_18.jpg" alt="Photo de Marie KOUDOU"
+                            class="h-120 w-full object-cover grayscale">
+                        <div
+                            class="absolute bottom-10 left-0 right-0 mx-auto w-11/12 bg-white p-4 rounded-lg shadow-2xl transform translate-y-1/4">
+                            <p class="font-semibold text-gray-800">Marie KOUDOU</p>
+                            <p class="text-sm text-gray-500">Directrice des programmes</p>
+                        </div>
+                    </div>
+                    <!-- Carte 3 -->
+                    <div class="relative overflow-hidden rounded-xl shadow-xl border border-gray-100">
+                        <img src="src/assets/images/Marisa_19.jpg" alt="Photo de Jean-Marc SOGLO"
+                            class="h-120 w-full object-cover">
+                        <div
+                            class="absolute bottom-10 left-0 right-0 mx-auto w-11/12 bg-white p-4 rounded-lg shadow-2xl transform translate-y-1/4">
+                            <p class="font-semibold text-gray-800">Jean-Marc SOGLO</p>
+                            <p class="text-sm text-gray-500">Rédacteur en Chef</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="h-16 md:h-20"></div>
+
+            </div>
+        </div>
+
 
     </main>
 
 
 
-    <!--Footer-->
+    <!-- Footer-->
+    <footer class="bg-[#094154] text-white font-['Stolz',_sans-serif] py-8">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 pb-6">
 
+                <div>
+                    <img src="src/assets/images/logo.png" alt="Logo Marisa TV" class="w-16 h-16 object-contain mb-3" />
+
+                    <p class="text-xs md:text-sm text-gray-300 leading-relaxed max-w-xs mb-4">
+                        Première chaîne religieuse à impact social, nous œuvrons pour l’éducation, la culture et les
+                        valeurs spirituelles en Afrique.
+                    </p>
+
+                    <h4 class="text-sm font-bold text-white pt-2">Suivez-nous sur</h4>
+                    <div class="flex space-x-2">
+                        <a href="#" class="text-xl text-gray-300 hover:text-[#FFDE11] transition-colors"><i
+                                class="ph ph-facebook-logo"></i></a>
+                        <a href="#" class="text-xl text-gray-300 hover:text-[#FFDE11] transition-colors"><i
+                                class="ph ph-tiktok-logo"></i></a>
+                        <a href="#" class="text-xl text-gray-300 hover:text-[#FFDE11] transition-colors"><i
+                                class="ph ph-youtube-logo"></i></a>
+                        <a href="#" class="text-xl text-gray-300 hover:text-[#FFDE11] transition-colors"><i
+                                class="ph ph-instagram-logo"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-[#FFDE11] mb-3">Liens utiles</h4>
+                    <ul class="space-y-1 text-xs md:text-sm text-gray-300">
+                        <li><a href="index.html" class="hover:text-[#FFDE11] transition-colors">Accueil</a></li>
+                        <li><a href="a-propos.html" class="hover:text-[#FFDE11] transition-colors">À propos</a></li>
+                        <li><a href="nos-emissions.html" class="hover:text-[#FFDE11] transition-colors">Nos
+                                émissions</a></li>
+                        <li><a href="grille.html" class="hover:text-[#FFDE11] transition-colors">Grille</a></li>
+                        <li><a href="actualites.html" class="hover:text-[#FFDE11] transition-colors">Actualités</a></li>
+                        <li><a href="radio-marisa.html" class="hover:text-[#FFDE11] transition-colors">Radio Marisa</a>
+                        </li>
+                        <li><a href="partenariats.html" class="hover:text-[#FFDE11] transition-colors">Partenariats</a>
+                        </li>
+                        <li><a href="contacts.html" class="hover:text-[#FFDE11] transition-colors">Contacts</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-[#FFDE11] mb-3">Coordonnées</h4>
+                    <ul class="space-y-3 text-xs md:text-sm text-gray-300">
+                        <li class="flex items-start hover:text-[#FFDE11] transition-colors cursor-pointer">
+                            <i class="ph ph-map-pin ph-fill text-lg mr-2 mt-0.5"></i>
+                            <span class="max-w-xs">Fidjrossè, près de l'École Primaire Publique de Fidjrossè,
+                                Cotonou.</span>
+                        </li>
+                        <li class="flex items-center hover:text-[#FFDE11] transition-colors cursor-pointer">
+                            <i class="ph ph-phone ph-fill text-lg mr-2"></i>
+                            <span>(+229) 01 40 68 44 44</span>
+                        </li>
+                        <li class="flex items-center hover:text-[#FFDE11] transition-colors cursor-pointer">
+                            <i class="ph ph-whatsapp-logo ph-fill text-lg mr-2"></i>
+                            <span>(+229) 01 99 17 18 16</span>
+                        </li>
+                        <li class="flex items-center hover:text-[#FFDE11] transition-colors cursor-pointer">
+                            <i class="ph ph-envelope-simple ph-fill text-lg mr-2"></i>
+                            <span>marisatv47@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div>
+                    <h4 class="text-lg font-bold text-[#FFDE11] mb-3">Newsletter</h4>
+                    <p class="text-xs md:text-sm text-gray-300 mb-3">
+                        Recevez chaque semaine nos actualités et programmes exclusifs.
+                    </p>
+
+                    <form class="flex w-full">
+                        <input type="email" placeholder="Votre adresse" class="flex-1 px-4 md:px-6 h-12 md:h-14 rounded-l-lg bg-white text-gray-800
+                        placeholder-gray-400 border-none focus:ring-0 text-sm">
+                        <button type="submit" class="h-12 md:h-14 px-3 bg-[#FFDE11] rounded-r-lg flex items-center
+                            justify-center hover:bg-yellow-400 transition-colors">
+                            <i class="ph ph-paper-plane-tilt text-[#094154] text-xl md:text-2xl"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="border-t border-white pt-4 mt-4 text-center text-xs text-white">
+                &copy; 2025 Marisa TV Afrique. Tous droits réservés.
+            </div>
+
+        </div>
+    </footer>
 
     <!-- Bouton de retour en haut -->
-    <button id="scrollToTopBtn" class="fixed bottom-6 right-6 z-50 p-3 bg-[#CA161A] text-white rounded-full shadow-xl 
-               transition-all duration-300 opacity-0 pointer-events-none hover:bg-red-800 hover:scale-110 transform">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+
+    <button id="scrollToTopBtn" class="fixed bottom-4 right-4 z-50 p-3
+                bg-[#094154] text-white
+                rounded-full shadow-xl
+                transition-opacity duration-300 opacity-0 pointer-events-none
+                hover:bg-[#FFDE11] hover:text-[#094154] text-sm md:text-base">
+
+        <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
         </svg>
     </button>
+
 
 
     <!-- JavaScript -->

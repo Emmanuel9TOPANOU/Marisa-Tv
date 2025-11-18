@@ -12,6 +12,13 @@ body.aos-animate {
 }
 
 
+/* Ajout d'une ombre personnalisée légère pour les cartes, 
+           similaire à celle de l'image. Tailwind's 'shadow-lg' pourrait aussi fonctionner. */
+        .card-shadow {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+
 /* Gestion du scroll pour les ancres */
 main {
    min-height: 100vh;

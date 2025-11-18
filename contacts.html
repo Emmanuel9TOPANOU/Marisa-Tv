@@ -16,52 +16,323 @@
 
 <body>
     <!-- En tete de ma page -->
-    <header>
+    <header class="fixed top-0 w-full z-50">
         <nav class="bg-[#094154] font-['Stolz',_sans-serif]">
-            <div class="flex items-center justify-between h-16 px-8">
+            <div class="flex items-center justify-between h-22 px-4 md:px-8">
 
                 <a href="index.html">
-                    <div class="mr-12">
-                        <img src="src/assets/images/logo.png" alt="Logo de la radio" class="w-24 h-24 object-contain" />
+                    <div class="mr-4 md:mr-12">
+                        <img src="src/assets/images/logo.png" alt="Logo de la radio"
+                            class="w-16 h-16 md:w-24 md:h-24" />
                     </div>
                 </a>
 
-                <div class="flex space-x-8 text-white text-base" id="main-nav-links">
-
-                    <a href="index.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                <!-- Liens de navigation pour desktop -->
+                <div class="hidden md:flex flex-wrap gap-x-4 lg:gap-x-8 text-white text-base" id="main-nav-links">
+                    <a href="index.html" class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Accueil
                     </a>
-
-                    <a href="a-propos.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="a-propos.html"
+                        class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         À propos
                     </a>
-                    <a href="nos-emissions.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="nos-emissions.html"
+                        class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Nos émissions
                     </a>
-                    <a href="grille.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="grille.html" class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Grille
                     </a>
-                    <a href="actualites.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="actualites.html"
+                        class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Actualités
                     </a>
-                    <a href="radio-marisa.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="radio-marisa.html"
+                        class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Radio Marisa
                     </a>
-                    <a href="partenariats.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="partenariats.html"
+                        class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Partenariats
                     </a>
-                    <a href="contacts.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="contacts.html"
+                        class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Contacts
                     </a>
                 </div>
+
+                <!-- Bouton hamburger -->
+                <button id="hamburgerBtn" class="md:hidden text-white text-3xl">
+                    <i class="ph ph-list"></i>
+                </button>
             </div>
         </nav>
+
+        <!-- Sidebar mobile -->
+        <div id="mobileSidebar"
+            class="fixed top-0 right-[-100%] w-64 h-full bg-[#094154] text-white p-6 flex flex-col gap-6 transition-all duration-300 z-50">
+            <button id="closeSidebar" class="self-end text-2xl">&times;</button>
+            <a href="index.html" class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Accueil</a>
+            <a href="a-propos.html" class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">À propos</a>
+            <a href="nos-emissions.html" class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Nos
+                émissions</a>
+            <a href="grille.html" class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Grille</a>
+            <a href="actualites.html"
+                class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Actualités</a>
+            <a href="radio-marisa.html" class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Radio
+                Marisa</a>
+            <a href="partenariats.html"
+                class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Partenariats</a>
+            <a href="contacts.html" class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Contacts</a>
+        </div>
     </header>
 
 
-    <main >
+    <main>
 
 
+        <!-- Section hero -->
+        <section
+            class="relative bg-cover bg-center py-10 md:py-16 text-white font-['Stolz',_sans-serif] overflow-hidden flex items-center justify-center">
+
+            <div class="absolute inset-0"
+                style="background-image: url('src/assets/images/Marisa_8.jpg'); background-size: cover; background-position: center;">
+                <div class="absolute inset-0 bg-[#094154] opacity-90"></div>
+            </div>
+
+            <div class="relative z-10 container mx-auto px-4 text-center max-w-3xl">
+
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
+                    Contacts</h1>
+
+                <p class="text-base md:text-lg opacity-90">
+                    Une question, une suggestion ou un projet ? Nous sommes à votre écoute.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Section formulaire de contact et infos -->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap lg:flex-nowrap gap-10">
+
+                <div class="w-full lg:w-1/2 p-6 bg-white rounded-xl shadow-lg">
+                    <h2 class="text-3xl font-bold text-[#094154] mb-2">Envoyez-nous un message</h2>
+                    <p class="text-gray-600 mb-8">Remplissez le formulaire ci-dessous et nous vous répondrons dans les
+                        plus brefs délais.</p>
+
+                    <form action="#" method="POST">
+
+                        <div class="mb-5">
+                            <label for="nom" class="block text-sm font-semibold text-[#094154]mb-1">Nom et Prénoms <span
+                                    class="text-red-500">*</span></label>
+                            <input type="text" id="nom" name="nom" placeholder="Votre nom complet" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg text-[#094154] focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 outline-none transition duration-150 ease-in-out">
+                        </div>
+
+                        <div class="mb-5">
+                            <label for="email" class="block text-sm font-semibold text-[#094154]mb-1">Email <span
+                                    class="text-red-500">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="votreemail@gmail.com" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg text-[#094154] focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 outline-none transition duration-150 ease-in-out">
+                        </div>
+
+                        <div class="mb-5 relative">
+                            <label for="sujet" class="block text-sm font-semibold text-[#094154]mb-1">Sujet <span
+                                    class="text-red-500">*</span></label>
+                            <select id="sujet" name="sujet" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg appearance-none text-[#094154] focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 outline-none transition duration-150 ease-in-out bg-white">
+                                <option value="" selected disabled>Sélectionnez un sujet</option>
+                                <option value="partenariat">Opportunité de partenariat</option>
+                                <option value="emission">Proposition d'émission</option>
+                                <option value="publicite">Demande publicitaire</option>
+                                <option value="temoignage">Partager un témoignage</option>
+                                <option value="devis">Demande de dévis personnalisé</option>
+                                <option value="autres">Autres...</option>
+                            </select>
+                            <div
+                                class="pointer-events-none absolute inset-y-0 right-0 top-6 flex items-center px-2 text-gray-700">
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-semibold text-[#094154]mb-1">Message <span
+                                    class="text-red-500">*</span></label>
+                            <textarea id="message" name="message" rows="6" placeholder="Écrivez votre message ici..."
+                                required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg text-[#094154] focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 outline-none transition duration-150 ease-in-out"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-[#094154] font-bold py-3 px-6 rounded-lg shadow-md transition duration-300">
+                            <span>Envoyer le message</span>
+                            <i class="ph ph-paper-plane-tilt ph-bold text-2xl"></i>
+                        </button>
+
+
+                    </form>
+                </div>
+
+                <div class="w-full lg:w-1/2 p-6 bg-white rounded-xl shadow-lg">
+                    <h2 class="text-3xl font-bold text-[#094154] mb-2">Informations de contact</h2>
+                    <p class="text-gray-600 mb-8">N'hésitez pas à nous contacter par le moyen qui vous convient le
+                        mieux.</p>
+
+                    <div class="space-y-6">
+
+                        <div class="flex items-start">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center mr-4">
+                                <i class="ph-bold ph-map-pin text-xl text-[#094154]"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-[#094154] mb-1">Adresse</h3>
+                                <p class="text-gray-600">Fidjrossè, à quelques mètres de la salle St Roger 2, non loin
+                                    de l'École Primaire Publique de Fidjrossè, Cotonou - Bénin.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start pt-6 border-t border-gray-100">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center mr-4">
+                                <i class="ph-bold ph-phone text-xl text-[#094154]"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-[#094154] mb-1">Téléphone</h3>
+                                <p class="text-gray-600">(+229) 01 40 68 44 44</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start pt-6 border-t border-gray-100">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center mr-4">
+                                <i class="ph-bold ph-envelope text-xl text-[#094154]"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-[#094154] mb-1">Email</h3>
+                                <p class="text-gray-600">marisatv47@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start pt-6 border-t border-gray-100">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center mr-4">
+                                <i class="ph-bold ph-clock text-xl text-[#094154]"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-[#094154] mb-1">Horaires</h3>
+                                <p class="text-gray-600">Lundi - Vendredi : 8h - 19h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carte Google Maps -->
+        <section class="py-12 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+                <h2 class="text-3xl text-semibold text-[#094154] sm:text-4xl">
+                    Où nous trouver
+                    <div class="mt-2 mx-auto h-1 w-20 bg-yellow-300 rounded-full"></div>
+                </h2>
+                <p class="mt-2 text-xl text-gray-600">
+                    Visitez notre siège à Cotonou
+                </p>
+
+                <div class="mt-10 shadow-xl rounded-lg overflow-hidden border-2 border-gray-200">
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2911.142972711608!2d2.375239536649639!3d6.359097311603767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023570065736de3%3A0xfa9763e7a6a8dc2f!2sRestaurant%20Le%20Nirvana!5e0!3m2!1sfr!2sbj!4v1763477843501!5m2!1sfr!2sbj"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" class="w-full" style="border:0; height: 500px;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section FAQ -->
+        <section class="py-12 bg-gray-50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-semibold text-[#094154] sm:text-4xl">
+                        Questions fréquentes
+                    </h2>
+                    <div class="mt-2 mx-auto h-1 w-20 bg-yellow-300 rounded-full"></div>
+                </div>
+
+                <div class="space-y-4">
+
+                    <div class="bg-white rounded-lg border border-gray-200">
+                        <button
+                            class="w-full flex items-center text-left text-lg font-medium text-[#094154] focus:outline-none py-4 px-4">
+                            <span class="text-xl text-[#094154] mr-3">►</span>
+                            Comment puis-je proposer une émission ?
+                        </button>
+
+                        <div class="px-4 pb-4 hidden">
+                            <div class="mt-2 text-gray-600 border-t pt-3">
+                                Veuillez remplir le formulaire de proposition d'émission disponible sur notre page
+                                Partenariats. Notre équipe éditoriale vous contactera sous 48h.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg border border-gray-200">
+                        <button
+                            class="w-full flex items-center text-left text-lg font-medium text-[#094154] focus:outline-none py-4 px-4">
+                            <span class="text-xl text-[#094154] mr-3">►</span>
+                            Quelles sont les options de partenariats ?
+                        </button>
+                        <div class="px-4 pb-4 hidden">
+                            <div class="mt-2 text-gray-600 border-t pt-3">
+                                Nous offrons des partenariats de contenu, de sponsoring et d'événementiel.
+                                Contactez-nous pour recevoir notre brochure complète.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg border border-gray-200">
+                        <button
+                            class="w-full flex items-center text-left text-lg font-medium text-[#094154] focus:outline-none py-4 px-4">
+                            <span class="text-xl text-[#094154] mr-3">►</span>
+                            Comment partager mon témoignage à l'antenne ?
+                        </button>
+                        <div class="px-4 pb-4 hidden">
+                            <div class="mt-2 text-gray-600 border-t pt-3">
+                                Vous pouvez nous envoyer votre témoignage par email ou nous appeler directement pendant
+                                les heures de bureau.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg border border-gray-200">
+                        <button
+                            class="w-full flex items-center text-left text-lg font-medium text-[#094154] focus:outline-none py-4 px-4">
+                            <span class="text-xl text-[#094154] mr-3">►</span>
+                            Puis-je visiter vos studios ?
+                        </button>
+                        <div class="px-4 pb-4 hidden">
+                            <div class="mt-2 text-gray-600 border-t pt-3">
+                                Les visites de studio sont possibles sur rendez-vous uniquement. Veuillez nous contacter
+                                au moins une semaine à l'avance.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
 
     </main>
 
@@ -69,11 +340,106 @@
 
     <!--Footer-->
 
+     <footer class="bg-[#094154] text-white font-['Stolz',_sans-serif] py-8">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 pb-6">
+
+                <div>
+                    <img src="src/assets/images/logo.png" alt="Logo Marisa TV" class="w-16 h-16 object-contain mb-3" />
+
+                    <p class="text-xs md:text-sm text-gray-300 leading-relaxed max-w-xs mb-4">
+                        Première chaîne religieuse à impact social, nous œuvrons pour l’éducation, la culture et les
+                        valeurs spirituelles en Afrique.
+                    </p>
+
+                    <h4 class="text-sm font-bold text-white pt-2">Suivez-nous sur</h4>
+                    <div class="flex space-x-2">
+                        <a href="#" class="text-xl text-gray-300 hover:text-[#FFDE11] transition-colors"><i
+                                class="ph ph-facebook-logo"></i></a>
+                        <a href="#" class="text-xl text-gray-300 hover:text-[#FFDE11] transition-colors"><i
+                                class="ph ph-tiktok-logo"></i></a>
+                        <a href="#" class="text-xl text-gray-300 hover:text-[#FFDE11] transition-colors"><i
+                                class="ph ph-youtube-logo"></i></a>
+                        <a href="#" class="text-xl text-gray-300 hover:text-[#FFDE11] transition-colors"><i
+                                class="ph ph-instagram-logo"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-[#FFDE11] mb-3">Liens utiles</h4>
+                    <ul class="space-y-1 text-xs md:text-sm text-gray-300">
+                        <li><a href="index.html" class="hover:text-[#FFDE11] transition-colors">Accueil</a></li>
+                        <li><a href="a-propos.html" class="hover:text-[#FFDE11] transition-colors">À propos</a></li>
+                        <li><a href="nos-emissions.html" class="hover:text-[#FFDE11] transition-colors">Nos
+                                émissions</a></li>
+                        <li><a href="grille.html" class="hover:text-[#FFDE11] transition-colors">Grille</a></li>
+                        <li><a href="actualites.html" class="hover:text-[#FFDE11] transition-colors">Actualités</a></li>
+                        <li><a href="radio-marisa.html" class="hover:text-[#FFDE11] transition-colors">Radio Marisa</a>
+                        </li>
+                        <li><a href="partenariats.html" class="hover:text-[#FFDE11] transition-colors">Partenariats</a>
+                        </li>
+                        <li><a href="contacts.html" class="hover:text-[#FFDE11] transition-colors">Contacts</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-[#FFDE11] mb-3">Coordonnées</h4>
+                    <ul class="space-y-3 text-xs md:text-sm text-gray-300">
+                        <li class="flex items-start hover:text-[#FFDE11] transition-colors cursor-pointer">
+                            <i class="ph ph-map-pin ph-fill text-lg mr-2 mt-0.5"></i>
+                            <span class="max-w-xs">Fidjrossè, près de l'École Primaire Publique de Fidjrossè,
+                                Cotonou.</span>
+                        </li>
+                        <li class="flex items-center hover:text-[#FFDE11] transition-colors cursor-pointer">
+                            <i class="ph ph-phone ph-fill text-lg mr-2"></i>
+                            <span>(+229) 01 40 68 44 44</span>
+                        </li>
+                        <li class="flex items-center hover:text-[#FFDE11] transition-colors cursor-pointer">
+                            <i class="ph ph-whatsapp-logo ph-fill text-lg mr-2"></i>
+                            <span>(+229) 01 99 17 18 16</span>
+                        </li>
+                        <li class="flex items-center hover:text-[#FFDE11] transition-colors cursor-pointer">
+                            <i class="ph ph-envelope-simple ph-fill text-lg mr-2"></i>
+                            <span>marisatv47@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div>
+                    <h4 class="text-lg font-bold text-[#FFDE11] mb-3">Newsletter</h4>
+                    <p class="text-xs md:text-sm text-gray-300 mb-3">
+                        Recevez chaque semaine nos actualités et programmes exclusifs.
+                    </p>
+
+                    <form class="flex w-full">
+                        <input type="email" placeholder="Votre adresse" class="flex-1 px-4 md:px-6 h-12 md:h-14 rounded-l-lg bg-white text-gray-800
+                        placeholder-gray-400 border-none focus:ring-0 text-sm">
+                        <button type="submit" class="h-12 md:h-14 px-3 bg-[#FFDE11] rounded-r-lg flex items-center
+                            justify-center hover:bg-yellow-400 transition-colors">
+                            <i class="ph ph-paper-plane-tilt text-[#094154] text-xl md:text-2xl"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="border-t border-white pt-4 mt-4 text-center text-xs text-white">
+                &copy; 2025 Marisa TV Afrique. Tous droits réservés.
+            </div>
+
+        </div>
+    </footer>
 
     <!-- Bouton de retour en haut -->
-    <button id="scrollToTopBtn" class="fixed bottom-6 right-6 z-50 p-3 bg-[#CA161A] text-white rounded-full shadow-xl 
-               transition-all duration-300 opacity-0 pointer-events-none hover:bg-red-800 hover:scale-110 transform">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <button id="scrollToTopBtn" class="fixed bottom-4 right-4 z-50 p-3
+                bg-[#094154] text-white
+                rounded-full shadow-xl
+                transition-opacity duration-300 opacity-0 pointer-events-none
+                hover:bg-[#FFDE11] hover:text-[#094154] text-sm md:text-base">
+
+        <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
         </svg>
     </button>

@@ -16,67 +16,647 @@
 
 <body>
     <!-- En tete de ma page -->
-    <header>
+    <header class="fixed top-0 w-full z-50">
         <nav class="bg-[#094154] font-['Stolz',_sans-serif]">
-            <div class="flex items-center justify-between h-16 px-8">
+            <div class="flex items-center justify-between h-22 px-4 md:px-8">
 
                 <a href="index.html">
-                    <div class="mr-12">
-                        <img src="src/assets/images/logo.png" alt="Logo de la radio" class="w-24 h-24 object-contain" />
+                    <div class="mr-4 md:mr-12">
+                        <img src="src/assets/images/logo.png" alt="Logo de la radio"
+                            class="w-16 h-16 md:w-24 md:h-24" />
                     </div>
                 </a>
 
-                <div class="flex space-x-8 text-white text-base" id="main-nav-links">
-
-                    <a href="index.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                <!-- Liens de navigation pour desktop -->
+                <div class="hidden md:flex flex-wrap gap-x-4 lg:gap-x-8 text-white text-base" id="main-nav-links">
+                    <a href="index.html" class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Accueil
                     </a>
-
-                    <a href="a-propos.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="a-propos.html"
+                        class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         À propos
                     </a>
-                    <a href="nos-emissions.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="nos-emissions.html"
+                        class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Nos émissions
                     </a>
-                    <a href="grille.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="grille.html" class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Grille
                     </a>
-                    <a href="actualites.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="actualites.html"
+                        class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Actualités
                     </a>
-                    <a href="radio-marisa.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="radio-marisa.html"
+                        class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Radio Marisa
                     </a>
-                    <a href="partenariats.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="partenariats.html"
+                        class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Partenariats
                     </a>
-                    <a href="contacts.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="contacts.html"
+                        class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Contacts
                     </a>
                 </div>
+
+                <!-- Bouton hamburger -->
+                <button id="hamburgerBtn" class="md:hidden text-white text-3xl">
+                    <i class="ph ph-list"></i>
+                </button>
             </div>
         </nav>
+
+        <!-- Sidebar mobile -->
+        <div id="mobileSidebar"
+            class="fixed top-0 right-[-100%] w-64 h-full bg-[#094154] text-white p-6 flex flex-col gap-6 transition-all duration-300 z-50">
+            <button id="closeSidebar" class="self-end text-2xl">&times;</button>
+            <a href="index.html" class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Accueil</a>
+            <a href="a-propos.html" class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">À propos</a>
+            <a href="nos-emissions.html" class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Nos
+                émissions</a>
+            <a href="grille.html" class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Grille</a>
+            <a href="actualites.html"
+                class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Actualités</a>
+            <a href="radio-marisa.html" class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Radio
+                Marisa</a>
+            <a href="partenariats.html"
+                class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Partenariats</a>
+            <a href="contacts.html" class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Contacts</a>
+        </div>
     </header>
 
 
-    <main >
+    <main>
 
 
+        <!-- Section hero -->
+        <section
+            class="relative bg-cover bg-center py-10 md:py-16 text-white font-['Stolz',_sans-serif] overflow-hidden flex items-center justify-center">
+
+            <div class="absolute inset-0"
+                style="background-image: url('src/assets/images/Marisa_8.jpg'); background-size: cover; background-position: center;">
+                <div class="absolute inset-0 bg-[#094154] opacity-90"></div>
+            </div>
+
+            <div class="relative z-10 container mx-auto px-4 text-center max-w-3xl">
+
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
+                    Partenariats</h1>
+
+                <p class="text-base md:text-lg opacity-90">
+                    Rejoignez-nous dans notre mission d’impact social et spirituel en Afrique.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Pourquoi devenir partenaires -->
+        <section class="py-16 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+
+                <h2 class="text-4xl font-bold text-[#094154] mb-2 text-center">
+                    Pourquoi devenir partenaires ?
+                    <div class="w-25 h-1 bg-[#FFDE11] mt-2 mx-auto"></div>
+                </h2>
+
+                <p class="text-xl text-gray-600 mb-12">
+                    Ensemble, créons un impact durable pour l'Afrique
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <div
+                        class="p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="flex justify-center mb-4">
+                            <svg class="w-10 h-10 text-[#094154]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-[#094154] mb-2">
+                            Visibilité maximale
+                        </h3>
+                        <p class="text-gray-600">
+                            Touchez plus de 2 millions de téléspectateurs par mois
+                        </p>
+                    </div>
+
+                    <div
+                        class="p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="flex justify-center mb-4">
+                            <i class="ph ph-users text-[#094154] ph-bold text-5xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-[#094154] mb-2">
+                            Audience engagée
+                        </h3>
+                        <p class="text-gray-600">
+                            Une communauté fidèle et active qui partage vos valeurs
+                        </p>
+                    </div>
+
+                    <div
+                        class="p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="flex justify-center mb-4">
+                            <i class="ph ph-user-plus text-[#094154] ph-bold text-5xl"></i>
+
+
+                        </div>
+                        <h3 class="text-xl font-semibold text-[#094154] mb-2">
+                            Image positive
+                        </h3>
+                        <p class="text-gray-600">
+                            Associez votre marque à des contenus inspirants et porteurs de sens
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Offres de partenariat -->
+        <section class="py-12 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+                <h2 class="text-3xl sm:text-4xl font-bold text-[#094154] mb-2">
+                    Offre de partenariat
+                </h2>
+                <div class="w-20 h-1 bg-[#FFDE11] mx-auto mb-10"></div>
+                <p class="text-lg text-gray-600 mb-12"> Choisissez la formule qui correspond à vos objectifs
+                </p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                    <div class="bg-white p-6 border border-[#094154] rounded-xl shadow-lg flex flex-col">
+                        <h3 class="text-xl font-bold text-[#094154] mb-2 underline">Sponsor Bronze</h3>
+                        <p class="text-2xl font-bold text-[#094154] mb-6">200 000 FCFA/mois</p>
+                        <ul class="text-left space-y-2 flex-grow mb-6">
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 w-4 h-4 mt-1 mr-2 text-[#FFDE11]" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-sm text-gray-600">4 spots publicitaires classiques 30s/mois</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 w-4 h-4 mt-1 mr-2 text-[#FFDE11]" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-sm text-gray-600">1 bande défilante pendant 24h (1 fois/mois)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 w-4 h-4 mt-1 mr-2 text-[#FFDE11]" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-sm text-gray-600">1 émission sponsorisée : 26 min (1x/mois)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 w-4 h-4 mt-1 mr-2 text-[#FFDE11]" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-sm text-gray-600">Mention sur nos réseaux sociaux (1
+                                    publication)</span>
+                            </li>
+                        </ul>
+
+                        <button
+                            class="w-full py-2.5 px-6 border border-[#094154] text-sm font-medium rounded-md text-white bg-[#094154] hover:bg-[#094154]/90 transition duration-150">
+                            Nous contacter
+                        </button>
+                    </div>
+
+                    <div class="bg-white border border-[#FFDE11] rounded-xl shadow-2xl flex flex-col overflow-hidden">
+
+                        <div class="bg-[#FFDE11] text-[#094154] text-xs font-semibold py-1.5 text-center">
+                            <span><i class="ph ph-chart-line-up"></i> Plus populaire</span>
+                        </div>
+
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-[#094154] mb-2 underline">Sponsor Argent</h3>
+                            <p class="text-2xl font-bold text-[#094154] mb-6">350 000 FCFA/mois</p>
+                            <ul class="text-left space-y-2 flex-grow mb-6">
+                                <li class="flex items-start">
+                                    <svg class="flex-shrink-0 w-4 h-4 mt-1 mr-2 text-[#FFDE11]" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-sm text-gray-600">Tous les avantages Bronze</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="flex-shrink-0 w-4 h-4 mt-1 mr-2 text-[#FFDE11]" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-sm text-gray-600">Logo sur bande d'info en continu</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="flex-shrink-0 w-4 h-4 mt-1 mr-2 text-[#FFDE11]" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-sm text-gray-600">4 spots publicitaires classiques 30s/mois</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="flex-shrink-0 w-4 h-4 mt-1 mr-2 text-[#FFDE11]" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-sm text-gray-600">1 émission sponsorisée : 26 min (1x/mois)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="flex-shrink-0 w-4 h-4 mt-1 mr-2 text-[#FFDE11]" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-sm text-gray-600">Mention sur nos réseaux sociaux (2
+                                        publication)</span>
+                                </li>
+                            </ul>
+
+                            <button
+                                class="w-full py-2.5 px-6 border border-transparent text-sm font-medium rounded-md text-[#094154] bg-[#FFDE11] hover:bg-[#FFDE11]/90 transition duration-150 shadow-md">
+                                Nous contacter
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 border border-[#094154] rounded-xl shadow-lg flex flex-col">
+                        <h3 class="text-xl font-bold text-[#094154] mb-2 underline">Sponsor Or</h3>
+                        <p class="text-2xl font-bold text-[#094154] mb-6">500 000 FCFA/mois</p>
+                        <ul class="text-left space-y-2 flex-grow mb-6">
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 w-4 h-4 mt-1 mr-2 text-[#FFDE11]" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-sm text-gray-600">Tous les avantages Argent</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 w-4 h-4 mt-1 mr-2 text-[#FFDE11]" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-sm text-gray-600">8 spots publicitaires premium 30s (18h-22h)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 w-4 h-4 mt-1 mr-2 text-[#FFDE11]" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-sm text-gray-600">1 création d'émission dédiée (26 min)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 w-4 h-4 mt-1 mr-2 text-[#FFDE11]" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-sm text-gray-600">4 bande défilante pendant 24h (1 fois/mois)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 w-4 h-4 mt-1 mr-2 text-[#FFDE11]" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-sm text-gray-600">1 émission sponsorisée: logo + annonce vocale</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 w-4 h-4 mt-1 mr-2 text-[#FFDE11]" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-sm text-gray-600">Live Facebook TV 1H (2fois/mois)</span>
+                            </li>
+                        </ul>
+
+                        <button
+                            class="w-full py-2.5 px-6 border border-[#094154] text-sm font-medium rounded-md text-white bg-[#094154] hover:bg-[#094154]/90 transition duration-150">
+                            Nous contacter
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mt-12">
+                    <h3 class="text-2xl font-bold text-[#094154] mb-4"> Besoin d'une offre sur-mesure ?Parlons-en !
+                    </h3>
+                    <button
+                        class="py-2.5 px-8 text-sm font-bold rounded-md text-[#094154] bg-[#FFDE11] hover:bg-[#FFDE11]/90 transition duration-150 shadow-md">
+                        Demander un devis personnalisé
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Logos des partenaires -->
+        <section class="py-12 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-[#094154] mb-2">
+                    Nos partenaires
+                </h2>
+                <div class="w-20 h-1 bg-[#FFDE11] mx-auto mb-4"></div>
+                <p class="text-lg text-gray-600 mb-12">Ils nous font confiance</p>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+
+                    <div class="p-4 bg-gray-100 rounded-lg flex items-center justify-center h-32">
+                        <img src="/path/to/logo-partenaire-1.png" alt="Logo Partenaire 1"
+                            class="max-h-full max-w-full object-contain">
+                    </div>
+
+                    <div class="p-4 bg-gray-100 rounded-lg flex items-center justify-center h-32">
+                        <img src="/path/to/logo-partenaire-2.png" alt="Logo Partenaire 2"
+                            class="max-h-full max-w-full object-contain">
+                    </div>
+
+                    <div class="p-4 bg-gray-100 rounded-lg flex items-center justify-center h-32">
+                        <img src="/path/to/logo-partenaire-3.png" alt="Logo Partenaire 3"
+                            class="max-h-full max-w-full object-contain">
+                    </div>
+
+                    <div class="p-4 bg-gray-100 rounded-lg flex items-center justify-center h-32">
+                        <img src="/path/to/logo-partenaire-4.png" alt="Logo Partenaire 4"
+                            class="max-h-full max-w-full object-contain">
+                    </div>
+
+                    <div class="p-4 bg-gray-100 rounded-lg flex items-center justify-center h-32">
+                        <img src="/path/to/logo-partenaire-5.png" alt="Logo Partenaire 5"
+                            class="max-h-full max-w-full object-contain">
+                    </div>
+
+                    <div class="p-4 bg-gray-100 rounded-lg flex items-center justify-center h-32">
+                        <img src="/path/to/logo-partenaire-6.png" alt="Logo Partenaire 6"
+                            class="max-h-full max-w-full object-contain">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Témoignages des partenaires -->
+        <section class="py-12 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-[#094154] mb-2">
+                    Témoignages
+                </h2>
+                <div class="w-20 h-1 bg-[#FFDE11] mx-auto mb-4"></div>
+                <p class="text-lg text-gray-600 mb-12">Ce que disent nos partenaires</p>
+
+                <div class="relative">
+                    <div id="temoignages-slider" class="grid grid-flow-col gap-8 overflow-x-auto snap-x snap-mandatory 
+                        lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:overflow-x-hidden p-1">
+
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 flex flex-col snap-start min-w-[300px]">
+                            <div class="flex items-center mb-4">
+                                <div class="flex text-yellow-400 mr-4">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">...</svg>
+                                </div>
+                                <div class="flex-grow">
+                                    <p class="font-bold text-gray-800 text-left">Jean MENSAH</p>
+                                    <p class="text-sm text-gray-600 text-left">Directeur Marketing, Entreprise Y</p>
+                                </div>
+                                <div class="w-16 h-16 rounded-full overflow-hidden ml-4 flex-shrink-0">
+                                    <img src="src/assets/images/Marisa_29.jpg" alt="Photo de Jean MENSAH"
+                                        class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <p class="text-gray-700 text-sm text-left italic">
+                                " Notre partenariat avec Marisa TV a considérablement augmenté notre visibilité auprès
+                                de la
+                                communauté chrétienne. Les valeurs partagées créent une vraie connexion avec notre
+                                audience.
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 flex flex-col snap-start min-w-[300px]">
+                            <div class="flex items-center mb-4">
+                                <div class="flex text-yellow-400 mr-4">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">...</svg>
+                                </div>
+                                <div class="flex-grow">
+                                    <p class="font-bold text-gray-800 text-left">Jean MENSAH</p>
+                                    <p class="text-sm text-gray-600 text-left">Directeur Marketing, Entreprise Y</p>
+                                </div>
+                                <div class="w-16 h-16 rounded-full overflow-hidden ml-4 flex-shrink-0">
+                                    <img src="src/assets/images/Marisa_29.jpg" alt="Photo de Jean MENSAH"
+                                        class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <p class="text-gray-700 text-sm text-left italic">
+                                " Notre partenariat avec Marisa TV a considérablement augmenté notre visibilité auprès
+                                de la
+                                communauté chrétienne. Les valeurs partagées créent une vraie connexion avec notre
+                                audience.
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 flex flex-col snap-start min-w-[300px]">
+                            <div class="flex items-center mb-4">
+                                <div class="flex text-yellow-400 mr-4">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">...</svg>
+                                </div>
+                                <div class="flex-grow">
+                                    <p class="font-bold text-gray-800 text-left">Jean MENSAH</p>
+                                    <p class="text-sm text-gray-600 text-left">Directeur Marketing, Entreprise Y</p>
+                                </div>
+                                <div class="w-16 h-16 rounded-full overflow-hidden ml-4 flex-shrink-0">
+                                    <img src="src/assets/images/Marisa_29.jpg" alt="Photo de Jean MENSAH"
+                                        class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <p class="text-gray-700 text-sm text-left italic">
+                                " Notre partenariat avec Marisa TV a considérablement augmenté notre visibilité auprès
+                                de la
+                                communauté chrétienne. Les valeurs partagées créent une vraie connexion avec notre
+                                audience.
+                            </p>
+                        </div>
+
+
+                    </div>
+
+                    <button id="prev-btn" class="absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 
+                                         p-2 rounded-full bg-white shadow-lg border border-gray-300 
+                                         text-[#094154] hover:bg-gray-100 z-10 hidden md:block">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <button id="next-btn" class="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 
+                                         p-2 rounded-full bg-white shadow-lg border border-gray-300 
+                                         text-[#094154] hover:bg-gray-100 z-10 hidden md:block">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section d'appel à l'action pour les partenariats -->
+        <section
+            class="relative bg-cover bg-center h-[300px] md:h-[300px] flex items-center text-white font-['Stolz',_sans-serif]"
+            style="background-image: url('src/assets/images/Marisa_8.jpg');">
+            <div class="absolute inset-0 bg-[#094154] opacity-90"></div>
+
+            <div class="relative z-10 container mx-auto px-4 text-center">
+                <h2 class="text-xl md:text-3xl font-semibold mb-2">
+                    Prêt à nous rejoindre ?
+                </h2>
+
+                <p class="text-sm md:text-lg max-w-4xl mx-auto mb-6 opacity-90">
+                    Discutons de la meilleure façon de collaborer pour un impact maximum.
+                </p>
+
+                <a href="contacts.html" class="group inline-flex items-center bg-[#FFDE11] text-[#094154] font-bold py-3 px-8 rounded-lg shadow-lg
+            hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105">
+                    Devenir partenaire
+
+                    <span
+                        class="ml-2 inline-block opacity-0 text-2xl transform scale-0 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
+                        →
+                    </span>
+                </a>
+
+            </div>
+        </section>
 
     </main>
 
 
 
     <!--Footer-->
+ 
+    <footer class="bg-[#094154] text-white font-['Stolz',_sans-serif] py-8">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 pb-6">
+
+                <div>
+                    <img src="src/assets/images/logo.png" alt="Logo Marisa TV" class="w-16 h-16 object-contain mb-3" />
+
+                    <p class="text-xs md:text-sm text-gray-300 leading-relaxed max-w-xs mb-4">
+                        Première chaîne religieuse à impact social, nous œuvrons pour l’éducation, la culture et les
+                        valeurs spirituelles en Afrique.
+                    </p>
+
+                    <h4 class="text-sm font-bold text-white pt-2">Suivez-nous sur</h4>
+                    <div class="flex space-x-2">
+                        <a href="#" class="text-xl text-gray-300 hover:text-[#FFDE11] transition-colors"><i
+                                class="ph ph-facebook-logo"></i></a>
+                        <a href="#" class="text-xl text-gray-300 hover:text-[#FFDE11] transition-colors"><i
+                                class="ph ph-tiktok-logo"></i></a>
+                        <a href="#" class="text-xl text-gray-300 hover:text-[#FFDE11] transition-colors"><i
+                                class="ph ph-youtube-logo"></i></a>
+                        <a href="#" class="text-xl text-gray-300 hover:text-[#FFDE11] transition-colors"><i
+                                class="ph ph-instagram-logo"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-[#FFDE11] mb-3">Liens utiles</h4>
+                    <ul class="space-y-1 text-xs md:text-sm text-gray-300">
+                        <li><a href="index.html" class="hover:text-[#FFDE11] transition-colors">Accueil</a></li>
+                        <li><a href="a-propos.html" class="hover:text-[#FFDE11] transition-colors">À propos</a></li>
+                        <li><a href="nos-emissions.html" class="hover:text-[#FFDE11] transition-colors">Nos
+                                émissions</a></li>
+                        <li><a href="grille.html" class="hover:text-[#FFDE11] transition-colors">Grille</a></li>
+                        <li><a href="actualites.html" class="hover:text-[#FFDE11] transition-colors">Actualités</a></li>
+                        <li><a href="radio-marisa.html" class="hover:text-[#FFDE11] transition-colors">Radio Marisa</a>
+                        </li>
+                        <li><a href="partenariats.html" class="hover:text-[#FFDE11] transition-colors">Partenariats</a>
+                        </li>
+                        <li><a href="contacts.html" class="hover:text-[#FFDE11] transition-colors">Contacts</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-[#FFDE11] mb-3">Coordonnées</h4>
+                    <ul class="space-y-3 text-xs md:text-sm text-gray-300">
+                        <li class="flex items-start hover:text-[#FFDE11] transition-colors cursor-pointer">
+                            <i class="ph ph-map-pin ph-fill text-lg mr-2 mt-0.5"></i>
+                            <span class="max-w-xs">Fidjrossè, près de l'École Primaire Publique de Fidjrossè,
+                                Cotonou.</span>
+                        </li>
+                        <li class="flex items-center hover:text-[#FFDE11] transition-colors cursor-pointer">
+                            <i class="ph ph-phone ph-fill text-lg mr-2"></i>
+                            <span>(+229) 01 40 68 44 44</span>
+                        </li>
+                        <li class="flex items-center hover:text-[#FFDE11] transition-colors cursor-pointer">
+                            <i class="ph ph-whatsapp-logo ph-fill text-lg mr-2"></i>
+                            <span>(+229) 01 99 17 18 16</span>
+                        </li>
+                        <li class="flex items-center hover:text-[#FFDE11] transition-colors cursor-pointer">
+                            <i class="ph ph-envelope-simple ph-fill text-lg mr-2"></i>
+                            <span>marisatv47@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
 
 
-    <!-- Bouton de retour en haut -->
-    <button id="scrollToTopBtn" class="fixed bottom-6 right-6 z-50 p-3 bg-[#CA161A] text-white rounded-full shadow-xl 
-               transition-all duration-300 opacity-0 pointer-events-none hover:bg-red-800 hover:scale-110 transform">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <div>
+                    <h4 class="text-lg font-bold text-[#FFDE11] mb-3">Newsletter</h4>
+                    <p class="text-xs md:text-sm text-gray-300 mb-3">
+                        Recevez chaque semaine nos actualités et programmes exclusifs.
+                    </p>
+
+                    <form class="flex w-full">
+                        <input type="email" placeholder="Votre adresse" class="flex-1 px-4 md:px-6 h-12 md:h-14 rounded-l-lg bg-white text-gray-800
+                        placeholder-gray-400 border-none focus:ring-0 text-sm">
+                        <button type="submit" class="h-12 md:h-14 px-3 bg-[#FFDE11] rounded-r-lg flex items-center
+                            justify-center hover:bg-yellow-400 transition-colors">
+                            <i class="ph ph-paper-plane-tilt text-[#094154] text-xl md:text-2xl"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="border-t border-white pt-4 mt-4 text-center text-xs text-white">
+                &copy; 2025 Marisa TV Afrique. Tous droits réservés.
+            </div>
+
+        </div>
+    </footer>
+
+     <!-- Bouton de retour en haut -->
+    <button id="scrollToTopBtn" class="fixed bottom-4 right-4 z-50 p-3
+                bg-[#094154] text-white
+                rounded-full shadow-xl
+                transition-opacity duration-300 opacity-0 pointer-events-none
+                hover:bg-[#FFDE11] hover:text-[#094154] text-sm md:text-base">
+
+        <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
         </svg>
     </button>
+  
 
 
     <!-- JavaScript -->

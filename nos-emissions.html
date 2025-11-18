@@ -16,50 +16,320 @@
 
 <body>
     <!-- En tete de ma page -->
-    <header>
+    <header class="fixed top-0 w-full z-50">
         <nav class="bg-[#094154] font-['Stolz',_sans-serif]">
-            <div class="flex items-center justify-between h-16 px-8">
+            <div class="flex items-center justify-between h-22 px-4 md:px-8">
 
                 <a href="index.html">
-                    <div class="mr-12">
-                        <img src="src/assets/images/logo.png" alt="Logo de la radio" class="w-24 h-24 object-contain" />
+                    <div class="mr-4 md:mr-12">
+                        <img src="src/assets/images/logo.png" alt="Logo de la radio"
+                            class="w-16 h-16 md:w-24 md:h-24" />
                     </div>
                 </a>
 
-                <div class="flex space-x-8 text-white text-base" id="main-nav-links">
-
-                    <a href="index.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                <!-- Liens de navigation pour desktop -->
+                <div class="hidden md:flex flex-wrap gap-x-4 lg:gap-x-8 text-white text-base" id="main-nav-links">
+                    <a href="index.html" class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Accueil
                     </a>
-
-                    <a href="a-propos.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="a-propos.html"
+                        class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         À propos
                     </a>
-                    <a href="nos-emissions.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="nos-emissions.html"
+                        class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Nos émissions
                     </a>
-                    <a href="grille.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="grille.html" class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Grille
                     </a>
-                    <a href="actualites.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="actualites.html"
+                        class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Actualités
                     </a>
-                    <a href="radio-marisa.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="radio-marisa.html"
+                        class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Radio Marisa
                     </a>
-                    <a href="partenariats.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="partenariats.html"
+                        class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Partenariats
                     </a>
-                    <a href="contacts.html" class="py-2 px-4 transition-colors duration-200 hover:text-[#FFDE11]">
+                    <a href="contacts.html"
+                        class="py-2 px-2 lg:px-4 transition-colors duration-200 hover:text-[#FFDE11]">
                         Contacts
                     </a>
                 </div>
+
+                <!-- Bouton hamburger -->
+                <button id="hamburgerBtn" class="md:hidden text-white text-3xl">
+                    <i class="ph ph-list"></i>
+                </button>
             </div>
         </nav>
+
+        <!-- Sidebar mobile -->
+        <div id="mobileSidebar"
+            class="fixed top-0 right-[-100%] w-64 h-full bg-[#094154] text-white p-6 flex flex-col gap-6 transition-all duration-300 z-50">
+            <button id="closeSidebar" class="self-end text-2xl">&times;</button>
+            <a href="index.html" class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Accueil</a>
+            <a href="a-propos.html" class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">À propos</a>
+            <a href="nos-emissions.html" class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Nos
+                émissions</a>
+            <a href="grille.html" class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Grille</a>
+            <a href="actualites.html"
+                class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Actualités</a>
+            <a href="radio-marisa.html" class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Radio
+                Marisa</a>
+            <a href="partenariats.html"
+                class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Partenariats</a>
+            <a href="contacts.html" class="py-2 px-2 transition-colors duration-200 hover:text-[#FFDE11]">Contacts</a>
+        </div>
     </header>
 
 
-    <main >
+    <main>
+
+        <!-- Section hero -->
+        <section
+            class="relative bg-cover bg-center py-10 md:py-16 text-white font-['Stolz',_sans-serif] overflow-hidden flex items-center justify-center">
+
+            <div class="absolute inset-0"
+                style="background-image: url('src/assets/images/Marisa_8.jpg'); background-size: cover; background-position: center;">
+                <div class="absolute inset-0 bg-[#094154] opacity-90"></div>
+            </div>
+
+            <div class="relative z-10 container mx-auto px-4 text-center max-w-3xl">
+
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-4">
+                    Nos émissions </h1>
+
+                <p class="text-base md:text-lg opacity-90">
+                    Une programmation riche et variée pour toute la famille, alliant spiritualité, culture et
+                    divertissement.
+                </p>
+
+            </div>
+        </section>
+
+
+        <div class="container mx-auto px-4 py-8 md:px-6 lg:px-8">
+            <header class="mb-8 text-center">
+                <p class="text-lg text-gray-700 max-w-4xl mx-auto">
+                    Découvrez notre grille de programmes conçue pour nourrir votre esprit et célébrer l'identité
+                    africaine, à travers six univers thématiques essentiels.
+                </p>
+            </header>
+
+            <nav class="mb-10 text-center">
+                <ul
+                    class="flex space-x-4 text-md font-medium overflow-x-auto whitespace-nowrap pb-2 mx-auto justify-center">
+                    <li>
+                        <a href="#"
+                            class="inline-block py-2 px-4 rounded-lg bg-yellow-300 text-gray-900 shadow-md">Tous</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="inline-block py-2 px-4 rounded-lg bg-white text-gray-800 border border-gray-200 hover:bg-gray-100 transition duration-150">Religion</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="inline-block py-2 px-4 rounded-lg bg-white text-gray-800 border border-gray-200 hover:bg-gray-100 transition duration-150">Culture</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="inline-block py-2 px-4 rounded-lg bg-white text-gray-800 border border-gray-200 hover:bg-gray-100 transition duration-150">Jeunesse</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="inline-block py-2 px-4 rounded-lg bg-white text-gray-800 border border-gray-200 hover:bg-gray-100 transition duration-150">Famille</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="inline-block py-2 px-4 rounded-lg bg-white text-gray-800 border border-gray-200 hover:bg-gray-100 transition duration-150">Musique</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="inline-block py-2 px-4 rounded-lg bg-white text-gray-800 border border-gray-200 hover:bg-gray-100 transition duration-150">Documentaire</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="w-full text-center mb-9">
+
+                <span class="text-2xl font-bold  text-yellow-300">9 émissions</span>
+            </div>
+
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+                <div class="bg-white rounded-lg overflow-hidden card-shadow hover:shadow-xl transition duration-300">
+                    <div class="relative">
+                        <img src="src/assets/images/Marisa_4.jpg" alt="Parole Vivante" class="w-full h-48 object-cover">
+                        <span
+                            class="absolute top-2 left-2 bg-yellow-300 text-white text-xs font-semibold px-2 py-0.5 rounded-sm">Religion</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-1">Parole Vivante</h3>
+                        <p class="text-gray-600 text-sm mb-3">Enseignement biblique quotidien avec des pasteurs renommés
+                            pour nourrir votre foi.</p>
+                        <p class="text-gray-500 text-xs font-medium">20H00</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden card-shadow hover:shadow-xl transition duration-300">
+                    <div class="relative">
+                        <img src="src/assets/images/Marisa_2.jpg" alt="Jeunesse en Action"
+                            class="w-full h-48 object-cover">
+                        <span
+                            class="absolute top-2 left-2 bg-yellow-300 text-white text-xs font-semibold px-2 py-0.5 rounded-sm">Jeunesse</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-1">Jeunesse en Action</h3>
+                        <p class="text-gray-600 text-sm mb-3">Magazine dédiée aux jeunes africains : talents, débats et
+                            projets communautaires.</p>
+                        <p class="text-gray-500 text-xs font-medium">18H30</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden card-shadow hover:shadow-xl transition duration-300">
+                    <div class="relative">
+                        <img src="src/assets/images/Marisa_6.jpg" alt="Culture et Tradition"
+                            class="w-full h-48 object-cover">
+                        <span
+                            class="absolute top-2 left-2 bg-yellow-300 text-white text-xs font-semibold px-2 py-0.5 rounded-sm">Culture</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-1">Culture et Tradition</h3>
+                        <p class="text-gray-600 text-sm mb-3">Découvrez les richesses culturelles et traditions de
+                            l'Afrique.</p>
+                        <p class="text-gray-500 text-xs font-medium">21H00</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden card-shadow hover:shadow-xl transition duration-300">
+                    <div class="relative">
+                        <img src="src/assets/images/Marisa_12.jpg" alt="Culte du Dimanche"
+                            class="w-full h-48 object-cover">
+                        <span
+                            class="absolute top-2 left-2 bg-yellow-300 text-white text-xs font-semibold px-2 py-0.5 rounded-sm">Religion</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-1">Culte du Dimanche</h3>
+                        <p class="text-gray-600 text-sm mb-3">Retransmissions en direct du service religieux avec
+                            louanges, prières et prédications.</p>
+                        <p class="text-gray-500 text-xs font-medium">10H00</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden card-shadow hover:shadow-xl transition duration-300">
+                    <div class="relative">
+                        <img src="src/assets/images/Marisa_17.jpg" alt="Famille Bénie" class="w-full h-48 object-cover">
+                        <span
+                            class="absolute top-2 left-2 bg-yellow-300 text-white text-xs font-semibold px-2 py-0.5 rounded-sm">Famille</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-1">Famille Bénie</h3>
+                        <p class="text-gray-600 text-sm mb-3">Conseils pratiques pour construire des familles solides
+                            basées sur les principes bibliques.</p>
+                        <p class="text-gray-500 text-xs font-medium">19H00</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden card-shadow hover:shadow-xl transition duration-300">
+                    <div class="relative">
+                        <img src="src/assets/images/Marisa_13.jpg" alt="Gospel Night" class="w-full h-48 object-cover">
+                        <span
+                            class="absolute top-2 left-2 bg-yellow-300 text-white text-xs font-semibold px-2 py-0.5 rounded-sm">Musique</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-1">Gospel Night</h3>
+                        <p class="text-gray-600 text-sm mb-3">Soirée musicale avec les meilleurs artistes gospel
+                            africains et internationaux.</p>
+                        <p class="text-gray-500 text-xs font-medium">21H30</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden card-shadow hover:shadow-xl transition duration-300">
+                    <div class="relative">
+                        <img src="src/assets/images/Marisa_15.jpg" alt="Prière du Matin"
+                            class="w-full h-48 object-cover">
+                        <span
+                            class="absolute top-2 left-2 bg-yellow-300 text-white text-xs font-semibold px-2 py-0.5 rounded-sm">Religion</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-1">Prière du Matin</h3>
+                        <p class="text-gray-600 text-sm mb-3">Commencez votre journée dans la présence de Dieu avec
+                            prières, méditations et chants.</p>
+                        <p class="text-gray-500 text-xs font-medium">06H00</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden card-shadow hover:shadow-xl transition duration-300">
+                    <div class="relative">
+                        <img src="src/assets/images/Marisa_16.jpg" alt="Racines Africaines"
+                            class="w-full h-48 object-cover">
+                        <span
+                            class="absolute top-2 left-2 bg-yellow-300 text-white text-xs font-semibold px-2 py-0.5 rounded-sm">Documentaire</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-1">Racines Africaines</h3>
+                        <p class="text-gray-600 text-sm mb-3">Documentaire sur l'histoire, les traditions et l'évolution
+                            de nos sociétés africaines.</p>
+                        <p class="text-gray-500 text-xs font-medium">14H00</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden card-shadow hover:shadow-xl transition duration-300">
+                    <div class="relative">
+                        <img src="src/assets/images/Marisa_14.jpg" alt="Les Enfants de Dieu"
+                            class="w-full h-48 object-cover">
+                        <span
+                            class="absolute top-2 left-2 bg-yellow-300 text-white text-xs font-semibold px-2 py-0.5 rounded-sm">Famille</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-1">Les Enfants de Dieu</h3>
+                        <p class="text-gray-600 text-sm mb-3">Programme pour enfants mêlant : histoires bibliques, jeux
+                            éducatifs et chants chrétiens.</p>
+                        <p class="text-gray-500 text-xs font-medium">17H00</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <section class="relative py-20 overflow-hidden bg-cover bg-center"
+            style="background-image: url('src/assets/images/Marisa_8.jpg');">
+            <div class="absolute inset-0 bg-[#094154] opacity-90"></div>
+
+            <div class="relative container mx-auto px-4 text-center z-10">
+
+                <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">
+                    Proposer une émission
+                </h2>
+
+                <p class="text-lg text-white mb-8 max-w-2xl mx-auto">
+                    Vous avez un projet d'émission ? Partagez-le avec nous !
+                </p>
+
+                <a href="#"
+                    class="inline-block bg-yellow-300 hover:bg-yellow-300 text-gray-700 font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
+                    Soumettre un projet
+                </a>
+
+            </div>
+        </section>
+
+
+
 
 
 
@@ -69,11 +339,107 @@
 
     <!--Footer-->
 
+    <footer class="bg-[#094154] text-white font-['Stolz',_sans-serif] py-8">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 pb-6">
+
+                <div>
+                    <img src="src/assets/images/logo.png" alt="Logo Marisa TV" class="w-16 h-16 object-contain mb-3" />
+
+                    <p class="text-xs md:text-sm text-gray-300 leading-relaxed max-w-xs mb-4">
+                        Première chaîne religieuse à impact social, nous œuvrons pour l’éducation, la culture et les
+                        valeurs spirituelles en Afrique.
+                    </p>
+
+                    <h4 class="text-sm font-bold text-white pt-2">Suivez-nous sur</h4>
+                    <div class="flex space-x-2">
+                        <a href="#" class="text-xl text-gray-300 hover:text-[#FFDE11] transition-colors"><i
+                                class="ph ph-facebook-logo"></i></a>
+                        <a href="#" class="text-xl text-gray-300 hover:text-[#FFDE11] transition-colors"><i
+                                class="ph ph-tiktok-logo"></i></a>
+                        <a href="#" class="text-xl text-gray-300 hover:text-[#FFDE11] transition-colors"><i
+                                class="ph ph-youtube-logo"></i></a>
+                        <a href="#" class="text-xl text-gray-300 hover:text-[#FFDE11] transition-colors"><i
+                                class="ph ph-instagram-logo"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-[#FFDE11] mb-3">Liens utiles</h4>
+                    <ul class="space-y-1 text-xs md:text-sm text-gray-300">
+                        <li><a href="index.html" class="hover:text-[#FFDE11] transition-colors">Accueil</a></li>
+                        <li><a href="a-propos.html" class="hover:text-[#FFDE11] transition-colors">À propos</a></li>
+                        <li><a href="nos-emissions.html" class="hover:text-[#FFDE11] transition-colors">Nos
+                                émissions</a></li>
+                        <li><a href="grille.html" class="hover:text-[#FFDE11] transition-colors">Grille</a></li>
+                        <li><a href="actualites.html" class="hover:text-[#FFDE11] transition-colors">Actualités</a></li>
+                        <li><a href="radio-marisa.html" class="hover:text-[#FFDE11] transition-colors">Radio Marisa</a>
+                        </li>
+                        <li><a href="partenariats.html" class="hover:text-[#FFDE11] transition-colors">Partenariats</a>
+                        </li>
+                        <li><a href="contacts.html" class="hover:text-[#FFDE11] transition-colors">Contacts</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-[#FFDE11] mb-3">Coordonnées</h4>
+                    <ul class="space-y-3 text-xs md:text-sm text-gray-300">
+                        <li class="flex items-start hover:text-[#FFDE11] transition-colors cursor-pointer">
+                            <i class="ph ph-map-pin ph-fill text-lg mr-2 mt-0.5"></i>
+                            <span class="max-w-xs">Fidjrossè, près de l'École Primaire Publique de Fidjrossè,
+                                Cotonou.</span>
+                        </li>
+                        <li class="flex items-center hover:text-[#FFDE11] transition-colors cursor-pointer">
+                            <i class="ph ph-phone ph-fill text-lg mr-2"></i>
+                            <span>(+229) 01 40 68 44 44</span>
+                        </li>
+                        <li class="flex items-center hover:text-[#FFDE11] transition-colors cursor-pointer">
+                            <i class="ph ph-whatsapp-logo ph-fill text-lg mr-2"></i>
+                            <span>(+229) 01 99 17 18 16</span>
+                        </li>
+                        <li class="flex items-center hover:text-[#FFDE11] transition-colors cursor-pointer">
+                            <i class="ph ph-envelope-simple ph-fill text-lg mr-2"></i>
+                            <span>marisatv47@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div>
+                    <h4 class="text-lg font-bold text-[#FFDE11] mb-3">Newsletter</h4>
+                    <p class="text-xs md:text-sm text-gray-300 mb-3">
+                        Recevez chaque semaine nos actualités et programmes exclusifs.
+                    </p>
+
+                    <form class="flex w-full">
+                        <input type="email" placeholder="Votre adresse" class="flex-1 px-4 md:px-6 h-12 md:h-14 rounded-l-lg bg-white text-gray-800
+                        placeholder-gray-400 border-none focus:ring-0 text-sm">
+                        <button type="submit" class="h-12 md:h-14 px-3 bg-[#FFDE11] rounded-r-lg flex items-center
+                            justify-center hover:bg-yellow-400 transition-colors">
+                            <i class="ph ph-paper-plane-tilt text-[#094154] text-xl md:text-2xl"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="border-t border-white pt-4 mt-4 text-center text-xs text-white">
+                &copy; 2025 Marisa TV Afrique. Tous droits réservés.
+            </div>
+
+        </div>
+    </footer>
+
 
     <!-- Bouton de retour en haut -->
-    <button id="scrollToTopBtn" class="fixed bottom-6 right-6 z-50 p-3 bg-[#CA161A] text-white rounded-full shadow-xl 
-               transition-all duration-300 opacity-0 pointer-events-none hover:bg-red-800 hover:scale-110 transform">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <button id="scrollToTopBtn" class="fixed bottom-4 right-4 z-50 p-3
+                bg-[#094154] text-white
+                rounded-full shadow-xl
+                transition-opacity duration-300 opacity-0 pointer-events-none
+                hover:bg-[#FFDE11] hover:text-[#094154] text-sm md:text-base">
+
+        <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
         </svg>
     </button>
@@ -85,6 +451,8 @@
     <script src="src/scripts/script-index.js"></script>
     <script src="src/scripts/script-nav.js"></script>
     <script src="src/scripts/script-modal.js"></script>
+    <script src="src/scripts/script-emissions.js"></script>
+
 
 
 </body>
