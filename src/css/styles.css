@@ -1,6 +1,19 @@
-/* ==========================
-   Global : gestion du défilement
-   ========================== */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Montserrat', sans-serif; }
+        
+        /* Animation douce pour l'apparition */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        
 html, body {
     overflow-x: hidden;  /* Empêche le défilement horizontal global */
     width: 100%;
@@ -94,5 +107,12 @@ section {
 .animate-pulse-yellow {
   animation: pulseYellow 1.4s infinite ease-in-out;
 }
+
+
+
+
+
+
+
 
 

@@ -16,8 +16,7 @@
 
 <body>
     <!-- En tete de ma page -->
-
-     <header class="fixed top-0 w-full z-50">
+    <header class="fixed top-0 w-full z-50">
         <nav class="bg-[#094154] font-['Stolz',_sans-serif]">
             <div class="flex items-center justify-between h-22 px-4 md:px-8">
 
@@ -89,10 +88,10 @@
     </header>
 
 
-    <main class="mt-22"> 
+    <main class="mt-22">
         <!-- Section hero -->
         <section
-            class="relative bg-cover bg-center pt-20 md:pt-82 py-20 text-white font-['Stolz',_sans-serif] overflow-hidden flex items-center justify-center">
+            class="relative bg-cover bg-center  md:pt-20 py-20 text-white font-['Stolz',_sans-serif] overflow-hidden flex items-center justify-center">
 
             <div class="absolute inset-0"
                 style="background-image: url('src/assets/images/Marisa_8.jpg'); background-size: cover; background-position: center;">
@@ -101,11 +100,12 @@
 
             <div class="relative z-10 container mx-auto px-4 text-center max-w-3xl">
 
-                <h1 class="text-3xl md:text-4xl md:pt-32 lg:text-5xl  font-semibold leading-tight mb-4">
+                <h1 class="text-3xl md:text-4xl  lg:text-5xl  font-semibold leading-tight mb-4" data-aos="fade-up"
+                    data-aos-duration="500">
                     A propos de nous
                 </h1>
 
-                <p class="text-base md:text-lg opacity-90">
+                <p class="text-base md:text-lg opacity-90" data-aos="fade-up" data-aos-duration="500">
                     Première chaîne religieuse à impact social en Afrique de l'Ouest, nous œuvrons depuis 2018
                     pour diffuser la Parole de Dieu et promouvoir les valeurs culturelles africaines.
                 </p>
@@ -116,19 +116,27 @@
 
         <!-- Section contenu -->
         <section class="bg-white py-16 ">
+
+            <div class="max-w-6xl mx-auto px-6 flex justify-end mb-8">
+                <a href="#"
+                    class="flex items-center space-x-2 bg-[#FFDE11] text-[#094154] font-bold py-2 px-4 rounded-lg text-sm shadow-md transition duration-300 hover:bg-yellow-400">
+                    <i class="ph ph-broadcast ph-bold text-2xl icon-glow bg-red-500/20 rounded-full p-1"></i>
+                    <span>Live TV</span>
+                </a>
+            </div>
+
             <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start px-6">
-                <div>
+
+                <div data-aos="fade-right" data-aos-duration="1000">
                     <h2 class="text-4xl font-bold text-gray-700 mb-6">
                         Notre histoire
                         <span class="block w-24 h-1 bg-[#FFDE11] mt-2"></span>
                     </h2>
-
                     <p class="text-gray-600 font-bold leading-relaxed mb-4">
                         Fondée en 2018 à Cotonou, au Bénin, Marisa TV Afrique est née d’une vision claire :
                         créer une plateforme médiatique chrétienne et africaine qui allie spiritualité,
                         culture et engagement social.
                     </p>
-
                     <p class="text-gray-600 leading-relaxed mb-4">
                         Dès ses débuts, la chaîne s’est donnée pour mission de raconter l’Afrique autrement,
                         à travers la foi, la connaissance et la solidarité. Portée par une équipe passionnée,
@@ -136,7 +144,6 @@
                         mêlant enseignements bibliques, émissions culturelles, divertissement, et initiatives
                         communautaires concrètes. Chaque programme est pensé pour inspirer, informer et rassembler.
                     </p>
-
                     <p class="text-gray-600 leading-relaxed">
                         Aujourd’hui, Marisa TV Afrique et sa radio sœur
                         diffusent des contenus de qualité 24h/24 à travers l’Afrique de l’Ouest et la diaspora.
@@ -145,44 +152,47 @@
                     </p>
                 </div>
 
-                <div class="relative pt-6">
+                <div class="relative pt-6" data-aos="fade-left" data-aos-duration="500">
                     <img src="src/assets/images/Marisa_7.jpg" alt="Studio d'enregistrement radio"
-                        class="rounded-xl shadow-lg object-cover w-full h-110 lg:max-h-full" />
+                        class="rounded-xl shadow-lg object-cover w-full h-96 sm:h-110 lg:max-h-full" />
 
-                    <!-- BADGE EN BAS COMME SUR LE DESIGN -->
-                    <div class="absolute -bottom-5 ml-99
-                      bg-yellow-300 text-[#094154] font-bold
-                        rounded-xl px-10 py-2 shadow-xl text-center">
-                        <p class="text-4xl">7+</p>
+                    <div class="absolute 
+                /* Positionnement pour PETITS/MOYENS écrans (chevauchement) */
+                right-3 bottom-0 sm:-bottom-2 md:-bottom-5 
+                
+                /* NOUVEAU : Positionnement pour GRANDS écrans (coin droit, évite le scroll) */
+                lg:-bottom-5 lg:right-6 
+                
+                bg-yellow-300 text-[#094154] font-bold
+                rounded-xl px-4 sm:px-10 py-2 shadow-xl text-center
+                w-auto max-w-xs sm:max-w-md">
+                        <p class="text-3xl sm:text-4xl">7+</p>
                         <p class="text-xs font-semibold leading-none">
                             Années<br>d'excellence
                         </p>
                     </div>
-
                 </div>
-
-
 
             </div>
         </section>
 
-
         <!-- Section Nos piliers -->
         <section class="bg-gray-50 py-16 ">
             <div class="max-w-6xl mx-auto px-6 text-center">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4"
+                    data-aos="fade-up" data-aos-duration="500">
                     Nos piliers
                     <span class="block w-24 h-1 bg-[#FFDE11] mx-auto mt-2"></span>
                 </h2>
-                <p class="text-gray-600 mb-12 max-w-3xl mx-auto">
+                <p class="text-gray-600 mb-12 max-w-3xl mx-auto"
+                    data-aos="fade-up" data-aos-duration="500">
                     Les fondations solides qui guident chacune de nos actions et donnent sens à notre mission médiatique
                 </p>
 
 
-                <!-- Cartes 1 -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div
-                        class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center border-t-5 border-[#FFDE11]">
+                    <div 
+                        class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center border-t-5 border-[#FFDE11] transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
                         <div class="text-[#FFDE11] mb-4">
                             <i class="ph ph-target ph-bold text-5xl"></i>
                         </div>
@@ -194,9 +204,8 @@
                     </div>
 
 
-                    <!-- Carte 2 -->
-                    <div
-                        class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center border-t-5 border-gray-700">
+                    <div 
+                        class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center border-t-5 border-gray-700 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
                         <div class="text-gray-700 mb-4">
                             <i class="ph ph-eye ph-bold text-5xl"></i>
 
@@ -209,9 +218,8 @@
                         </p>
                     </div>
 
-                    <!-- Carte 3 -->
-                    <div
-                        class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center border-t-5 border-yellow-300">
+                    <div 
+                        class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center border-t-5 border-yellow-300 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
                         <div class="text-yellow-300 mb-4">
                             <i class="ph ph-medal ph-bold text-5xl"></i>
                         </div>
@@ -221,13 +229,13 @@
                             africaines et engagement envers la jeunesse.
                         </p>
                     </div>
-                    <!-- carte 4 -->
-                    <div
-                        class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center border-t-5 border-gray-800">
+
+                    <div 
+                        class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center border-t-5 border-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
                         <div class="text-gray-800 mb-4 ">
                             <i class="ph ph-users ph-bold text-5xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold  text-gray-800 mb-3">Notre Engagement</h3>
+                        <h3 class="text-xl font-bold  text-gray-800 mb-3">Notre Engagement</h3>
                         <p class="text-gray-600 text-center">
                             Servir notre communauté avec des contenus
                             authentiques, inspirants et accessibles à tous les
@@ -243,7 +251,7 @@
 
             <div class="container mx-auto px-4 text-center">
 
-                <h2 class="text-3xl md:text-4xl font-bold">
+                <h2 class="text-3xl md:text-4xl font-bold" data-aos="fade-left" data-aos-duration="500">
                     Marisa TV en quelques chiffres
                 </h2>
 
@@ -279,20 +287,21 @@
         <div class="bg-white py-20">
             <div class="container mx-auto px-4 text-center">
 
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800" data-aos="fade-left" data-aos-duration="500">
                     Notre équipe
                 </h2>
 
                 <div class="w-16 h-1 bg-yellow-400 mx-auto mt-2"></div>
 
-                <p class="text-gray-600 text-lg mt-4 mb-12">
+                <p class="text-gray-600 text-lg mt-4 mb-12" data-aos="fade-left" data-aos-duration="500">
                     Des professionnels dévoués au service de la communauté
                 </p>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
                     <!-- Carte 1 -->
-                    <div class="relative overflow-hidden rounded-xl shadow-xl border border-gray-100">
+                    <div class="relative overflow-hidden rounded-xl shadow-xl border border-gray-100" data-aos="fade-up"
+                        data-aos-duration="1000">
                         <img src="src/assets/images/Marisa_10.jpg" alt="Photo de Cyrille T. MONKOUN TCHIBOZO"
                             class="h-120 w-full object-cover">
                         <div
@@ -302,7 +311,8 @@
                         </div>
                     </div>
                     <!-- Carte 2 -->
-                    <div class="relative overflow-hidden rounded-xl shadow-xl border border-gray-100">
+                    <div class="relative overflow-hidden rounded-xl shadow-xl border border-gray-100" data-aos="fade-up"
+                        data-aos-duration="1500">
                         <img src="src/assets/images/Marisa_18.jpg" alt="Photo de Marie KOUDOU"
                             class="h-120 w-full object-cover grayscale">
                         <div
@@ -312,7 +322,8 @@
                         </div>
                     </div>
                     <!-- Carte 3 -->
-                    <div class="relative overflow-hidden rounded-xl shadow-xl border border-gray-100">
+                    <div class="relative overflow-hidden rounded-xl shadow-xl border border-gray-100" data-aos="fade-up"
+                        data-aos-duration="2000">
                         <img src="src/assets/images/Marisa_19.jpg" alt="Photo de Jean-Marc SOGLO"
                             class="h-120 w-full object-cover">
                         <div
