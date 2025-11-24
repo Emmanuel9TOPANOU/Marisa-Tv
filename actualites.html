@@ -475,37 +475,41 @@
         </div>
 
         <!-- Section d'appel à l'action pour les partenariats -->
-        <section
-            class="relative bg-cover mt-10 bg-center h-[300px] md:h-[300px] flex items-center text-white font-['Stolz',_sans-serif]"
+        <section class="relative bg-cover bg-center py-16"
             style="background-image: url('src/assets/images/Marisa_8.jpg');">
-            <div class="absolute inset-0 bg-[#094154] opacity-90"></div>
 
-            <div class="relative z-10 container mx-auto px-4 text-center">
-                <h2 class="text-xl md:text-3xl font-semibold mb-2" data-aos="fade-up" data-aos-duration="500">
+            <!-- Overlay sombre -->
+             <div class="absolute inset-0 bg-[#094154] opacity-90"></div>
+
+            <div class="relative max-w-4xl mx-auto px-4 text-center text-white">
+                <h2 class="text-3xl md:text-4xl font-bold mb-3">
                     Newsletter Marisa TV
                 </h2>
 
-                <p class="text-sm md:text-lg max-w-4xl mx-auto mb-6 opacity-90" data-aos="fade-up"
-                    data-aos-duration="700">
+                <p class="text-lg mb-6">
                     Recevez nos dernières actualités et programmes directement dans votre boîte mail.
                 </p>
 
-                <a href="contacts.html" class="group inline-flex items-center bg-[#FFDE11] text-[#094154] font-bold py-3 px-8 rounded-lg shadow-lg
-            hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105">
-                    S’abonner
+                <!-- Formulaire -->
+                <form class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <input type="email" placeholder="Votre adresse"
+                        class="w-full sm:w-[300px] px-4 py-3 rounded-lg text-gray-800 border-2 border-[#FFDE11] bg-white" />
 
-                    <span class="inline-block ml-5 text-2xl">→</span>
-                </a>
-
+                    <button type="submit"
+                        class="bg-[#FFDE11] text-[#094154] font-semibold px-6 py-3 rounded-lg hover:bg-yellow-400 transition">
+                        S’abonner
+                    </button>
+                </form>
             </div>
         </section>
+
 
 
 
     </main>
 
     <!--Footer-->
-   <footer class="bg-[#094154] text-white font-['Stolz',_sans-serif] py-8">
+    <footer class="bg-[#094154] text-white font-['Stolz',_sans-serif] py-8">
         <div class="container mx-auto px-4 md:px-8">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 pb-6">
 
