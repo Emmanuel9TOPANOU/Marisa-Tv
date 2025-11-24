@@ -437,107 +437,186 @@
         <!-- Témoignages des partenaires -->
         <section class="py-12 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl sm:text-4xl font-bold text-[#094154] mb-2">
-                    Témoignages
-                </h2>
+
+                <h2 class="text-3xl sm:text-4xl font-bold text-[#094154] mb-2">Témoignages</h2>
                 <div class="w-20 h-1 bg-[#FFDE11] mx-auto mb-4"></div>
                 <p class="text-lg text-gray-600 mb-12">Ce que disent nos partenaires</p>
 
                 <div class="relative">
-                    <div id="temoignages-slider" class="grid grid-flow-col gap-8 overflow-x-auto snap-x snap-mandatory 
-                        lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:overflow-x-hidden p-1">
 
-                        <div
-                            class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 flex flex-col snap-start min-w-[300px]">
-                            <div class="flex items-center mb-4">
-                                <div class="flex text-yellow-400 mr-4">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">...</svg>
+                    <div id="slider-wrapper" class="hidden lg:block overflow-hidden relative w-full">
+                        <div id="slider-track"
+                            class="flex gap-8 w-max animate-none transition-transform duration-300 ease-out">
+
+                            <div
+                                class="testimonial bg-white p-6 rounded-xl shadow-lg border border-gray-200 min-w-[300px]">
+                                <div class="flex items-start mb-4">
+                                    <div class="flex-grow">
+                                        <div class="flex text-yellow-300 mb-2">⭐⭐⭐⭐⭐</div>
+                                        <div>
+                                            <p class="font-bold text-gray-800 text-left">Jean MENSAH</p>
+                                            <p class="text-sm text-gray-600 text-left">Directeur Marketing</p>
+                                        </div>
+                                    </div>
+                                    <div class="w-16 h-16 rounded-full overflow-hidden ml-4 flex-shrink-0">
+                                        <img src="src/assets/images/Marisa_29.jpg" class="w-full h-full object-cover">
+                                    </div>
                                 </div>
+                                <p class="text-gray-700 text-sm text-justify italic">
+                                    "Notre partenariat avec Marisa <br>TV a considérablement augmenté notre visibilité."
+                                </p>
+                            </div>
+
+                            <div
+                                class="testimonial bg-white p-6 rounded-xl shadow-lg border border-gray-200 min-w-[300px]">
+                                <div class="flex items-start mb-4">
+                                    <div class="flex-grow">
+                                        <div class="flex text-yellow-300 mb-2">⭐⭐⭐⭐⭐</div>
+                                        <div>
+                                            <p class="font-bold text-gray-800 text-left">Sarah KOFFI</p>
+                                            <p class="text-sm text-gray-600 text-left">Responsable Communication</p>
+                                        </div>
+                                    </div>
+                                    <div class="w-16 h-16 rounded-full overflow-hidden ml-4 flex-shrink-0">
+                                        <img src="src/assets/images/Marisa_29.jpg" class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 text-sm text-justify italic">
+                                    "Une équipe professionnelle et à <br>l’écoute. Marisa TV nous a permis d’atteindre
+                                    <br>
+                                    un
+                                    public que nous ne touchions pas auparavant."
+                                </p>
+                            </div>
+
+                            <div
+                                class="testimonial bg-white p-6 rounded-xl shadow-lg border border-gray-200 min-w-[300px]">
+                                <div class="flex items-start mb-4">
+                                    <div class="flex-grow">
+                                        <div class="flex text-yellow-300 mb-2">⭐⭐⭐⭐</div>
+                                        <div>
+                                            <p class="font-bold text-gray-800 text-left">Louis ADOM</p>
+                                            <p class="text-sm text-gray-600 text-left">Entrepreneur</p>
+                                        </div>
+                                    </div>
+                                    <div class="w-16 h-16 rounded-full overflow-hidden ml-4 flex-shrink-0">
+                                        <img src="src/assets/images/Marisa_29.jpg" class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 text-sm text-justify italic">
+                                    "Leur réseau nous a apporté une <br>belle communauté fidèle et engagée."
+                                </p>
+                            </div>
+
+                            <div
+                                class="testimonial bg-white p-6 rounded-xl shadow-lg border border-gray-200 min-w-[300px]">
+                                <div class="flex items-start mb-4">
+                                    <div class="flex-grow">
+                                        <div class="flex text-yellow-300 mb-2">⭐⭐⭐⭐⭐</div>
+                                        <div>
+                                            <p class="font-bold text-gray-800 text-left">Marie KABLAN</p>
+                                            <p class="text-sm text-gray-600 text-left">CEO, Boutique Lumière</p>
+                                        </div>
+                                    </div>
+                                    <div class="w-16 h-16 rounded-full overflow-hidden ml-4 flex-shrink-0">
+                                        <img src="src/assets/images/Marisa_29.jpg" class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 text-sm text-justify italic">
+                                    "Grâce à nos publicités sur Marisa <br>TV, nos ventes ont augmenté dès le premier
+                                    mois."
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:hidden">
+
+                        <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                            <div class="flex items-start mb-4">
                                 <div class="flex-grow">
-                                    <p class="font-bold text-gray-800 text-left">Jean MENSAH</p>
-                                    <p class="text-sm text-gray-600 text-left">Directeur Marketing, Entreprise Y</p>
+                                    <div class="flex text-yellow-300 mb-2">⭐⭐⭐⭐⭐</div>
+                                    <div>
+                                        <p class="font-bold text-gray-800 text-left">Jean MENSAH</p>
+                                        <p class="text-sm text-gray-600 text-left">Directeur Marketing</p>
+                                    </div>
                                 </div>
                                 <div class="w-16 h-16 rounded-full overflow-hidden ml-4 flex-shrink-0">
-                                    <img src="src/assets/images/Marisa_29.jpg" alt="Photo de Jean MENSAH"
-                                        class="w-full h-full object-cover">
+                                    <img src="src/assets/images/Marisa_29.jpg" class="w-full h-full object-cover">
                                 </div>
                             </div>
-                            <p class="text-gray-700 text-sm text-left italic">
-                                " Notre partenariat avec Marisa TV a considérablement augmenté notre visibilité auprès
-                                de la
-                                communauté chrétienne. Les valeurs partagées créent une vraie connexion avec notre
-                                audience.
+                            <p class="text-gray-700 text-sm text-justify italic">
+                                "Notre partenariat avec Marisa <br>TV a considérablement augmenté notre visibilité."
                             </p>
                         </div>
 
-                        <div
-                            class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 flex flex-col snap-start min-w-[300px]">
-                            <div class="flex items-center mb-4">
-                                <div class="flex text-yellow-400 mr-4">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">...</svg>
-                                </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                            <div class="flex items-start mb-4">
                                 <div class="flex-grow">
-                                    <p class="font-bold text-gray-800 text-left">Jean MENSAH</p>
-                                    <p class="text-sm text-gray-600 text-left">Directeur Marketing, Entreprise Y</p>
+                                    <div class="flex text-yellow-300 mb-2">⭐⭐⭐⭐⭐</div>
+                                    <div>
+                                        <p class="font-bold text-gray-800 text-left">Sarah KOFFI</p>
+                                        <p class="text-sm text-gray-600 text-left">Responsable Communication</p>
+                                    </div>
                                 </div>
                                 <div class="w-16 h-16 rounded-full overflow-hidden ml-4 flex-shrink-0">
-                                    <img src="src/assets/images/Marisa_29.jpg" alt="Photo de Jean MENSAH"
-                                        class="w-full h-full object-cover">
+                                    <img src="src/assets/images/Marisa_29.jpg" class="w-full h-full object-cover">
                                 </div>
                             </div>
-                            <p class="text-gray-700 text-sm text-left italic">
-                                " Notre partenariat avec Marisa TV a considérablement augmenté notre visibilité auprès
-                                de la
-                                communauté chrétienne. Les valeurs partagées créent une vraie connexion avec notre
-                                audience.
+                            <p class="text-gray-700 text-sm text-justify italic">
+                                "Une équipe professionnelle et à l’écoute.<br> Marisa
+                                TV nous a permis d’atteindre <br> un public
+                                que nous ne touchions pas auparavant."
                             </p>
                         </div>
 
-                        <div
-                            class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 flex flex-col snap-start min-w-[300px]">
-                            <div class="flex items-center mb-4">
-                                <div class="flex text-yellow-400 mr-4">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">...</svg>
-                                </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                            <div class="flex items-start mb-4">
                                 <div class="flex-grow">
-                                    <p class="font-bold text-gray-800 text-left">Jean MENSAH</p>
-                                    <p class="text-sm text-gray-600 text-left">Directeur Marketing, Entreprise Y</p>
+                                    <div class="flex text-yellow-300 mb-2">⭐⭐⭐⭐</div>
+                                    <div>
+                                        <p class="font-bold text-gray-800 text-left">Louis ADOM</p>
+                                        <p class="text-sm text-gray-600 text-left">Entrepreneur</p>
+                                    </div>
                                 </div>
                                 <div class="w-16 h-16 rounded-full overflow-hidden ml-4 flex-shrink-0">
-                                    <img src="src/assets/images/Marisa_29.jpg" alt="Photo de Jean MENSAH"
-                                        class="w-full h-full object-cover">
+                                    <img src="src/assets/images/Marisa_29.jpg" class="w-full h-full object-cover">
                                 </div>
                             </div>
-                            <p class="text-gray-700 text-sm text-left italic">
-                                " Notre partenariat avec Marisa TV a considérablement augmenté notre visibilité auprès
-                                de la
-                                communauté chrétienne. Les valeurs partagées créent une vraie connexion avec notre
-                                audience.
+                            <p class="text-gray-700 text-sm text-justify italic">
+                                "Leur réseau nous a apporté une <br>belle communauté fidèle et engagée."
                             </p>
                         </div>
 
+                        <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                            <div class="flex items-start mb-4">
+                                <div class="flex-grow">
+                                    <div class="flex text-yellow-300 mb-2">⭐⭐⭐⭐⭐</div>
+                                    <div>
+                                        <p class="font-bold text-gray-800 text-left">Marie KABLAN</p>
+                                        <p class="text-sm text-gray-600 text-left">CEO, Boutique Lumière</p>
+                                    </div>
+                                </div>
+                                <div class="w-16 h-16 rounded-full overflow-hidden ml-4 flex-shrink-0">
+                                    <img src="src/assets/images/Marisa_29.jpg" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <p class="text-gray-700 text-sm text-justify italic">
+                                "Grâce à nos publicités sur Marisa <br>TV, nos ventes ont augmenté dès le premier mois."
+                            </p>
+                        </div>
 
                     </div>
 
-                    <button id="prev-btn" class="absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 
-                                         p-2 rounded-full bg-white shadow-lg border border-gray-300 
-                                         text-[#094154] hover:bg-gray-100 z-10 hidden md:block">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
-                            </path>
-                        </svg>
-                    </button>
+                    <button id="prev-btn"
+                        class="absolute top-1/2 left-0 transform -translate-x-full -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg border border-gray-300 text-2xl text-[#094154] hover:bg-[#094154] hover:text-white transition-all duration-300 z-10 hidden lg:flex">←</button>
 
-                    <button id="next-btn" class="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 
-                                         p-2 rounded-full bg-white shadow-lg border border-gray-300 
-                                         text-[#094154] hover:bg-gray-100 z-10 hidden md:block">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                            </path>
-                        </svg>
-                    </button>
+                    <button id="next-btn"
+                        class="absolute top-1/2 right-0 transform translate-x-full -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg border border-gray-300 text-2xl text-[#094154] hover:bg-[#094154] hover:text-white transition-all duration-300 z-10 hidden lg:flex">→</button>
+
+
+
                 </div>
             </div>
         </section>
