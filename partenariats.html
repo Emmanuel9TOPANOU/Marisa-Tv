@@ -207,7 +207,7 @@
 
                     <div
                         class="group bg-white p-6 border border-[#094154] rounded-xl shadow-lg flex flex-col transition-all duration-300 ease-in-out hover:scale-[1.03] hover:shadow-xl">
-                        <h3 class="text-xl font-bold text-[#094154] mb-2 underline">Sponsor Bronze</h3>
+                        <h3 class="text-xl mt-7 font-bold text-[#094154] mb-2 underline">Sponsor Bronze</h3>
                         <p class="text-2xl font-bold text-[#094154] mb-6">200 000 FCFA/mois</p>
                         <ul class="text-left space-y-2 flex-grow mb-6">
                             <li class="flex items-start">
@@ -260,7 +260,7 @@
                         </div>
 
                         <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-xl font-bold text-[#094154] mb-2 underline">Sponsor Argent</h3>
+                            <h3 class="text-xl font-bold  text-[#094154] mb-2 underline">Sponsor Argent</h3>
                             <p class="text-2xl font-bold text-[#094154] mb-6">350 000 FCFA/mois</p>
                             <ul class="text-left space-y-2 flex-grow mb-6">
                                 <li class="flex items-start">
@@ -316,7 +316,7 @@
 
                     <div
                         class="group bg-white p-6 border border-[#094154] rounded-xl shadow-lg flex flex-col transition-all duration-300 ease-in-out hover:scale-[1.03] hover:shadow-xl">
-                        <h3 class="text-xl font-bold text-[#094154] mb-2 underline">Sponsor Or</h3>
+                        <h3 class="text-xl font-bold mt-7 text-[#094154] mb-2 underline">Sponsor Or</h3>
                         <p class="text-2xl font-bold text-[#094154] mb-6">500 000 FCFA/mois</p>
                         <ul class="text-left space-y-2 flex-grow mb-6">
                             <li class="flex items-start">
@@ -655,7 +655,7 @@
 
     <!--Footer-->
 
-    <footer class="bg-[#094154] text-white font-['Stolz',_sans-serif] py-8">
+   <footer class="bg-[#094154] text-white font-['Stolz',_sans-serif] py-8">
         <div class="container mx-auto px-4 md:px-8">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 pb-6">
 
@@ -763,17 +763,25 @@
                 <div>
                     <h4 class="text-lg font-bold text-[#FFDE11] mb-3">Newsletter</h4>
                     <p class="text-xs md:text-sm text-gray-300 mb-3">
-                        Recevez chaque semaine nos actualités et programmes exclusifs.
+                        Recevez chaque semaine nos actualités, programmes exclusifs, interviews inédites et les
+                        coulisses de vos émissions préférées directement dans votre boîte mail.
                     </p>
 
-                    <form class="flex w-full" method="POST" action="subscribe.php">
-                        <input type="email" name="email" required placeholder="Votre adresse" class="flex-1 px-4 md:px-6 h-12 md:h-14 rounded-l-lg bg-white text-gray-800
-               placeholder-gray-400 border-none focus:ring-0 text-sm">
-                        <button type="submit" class="h-12 md:h-14 px-3 bg-[#FFDE11] rounded-r-lg flex items-center
-                justify-center hover:bg-yellow-400 transition-colors">
-                            <i class="ph ph-paper-plane-tilt text-[#094154] text-xl md:text-2xl"></i>
+                    <form class="flex w-full max-w-lg mx-auto shadow-lg rounded-lg overflow-hidden" method="POST"
+                        action="subscribe.php">
+                        <!-- Input email -->
+                        <input type="email" name="email" required placeholder="Votre adresse"
+                            class="flex-1 px-2 md:px-3 h-10 md:h-12 rounded-l-lg bg-gray-50 text-gray-800 placeholder-gray-400 border-none focus:ring-0 text-sm">
+
+                        <!-- Button submit -->
+                        <button type="submit"
+                            class="h-10 md:h-12 px-2 md:px-3 bg-[#FFDE11] rounded-r-lg flex items-center justify-center hover:bg-yellow-400 transition-all duration-300 shadow-md">
+                            <i class="ph ph-paper-plane-tilt text-[#094154] text-lg md:text-xl"></i>
                         </button>
                     </form>
+
+
+
                 </div>
 
             </div>
